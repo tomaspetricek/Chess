@@ -4,11 +4,9 @@
 #include "chess_pieces/Knight.h"
 
 int main() {
-    Position p {0, 0};
-    Queen queen {{0, 0}};
-    //Knight knight {};
-
-    std::cout << Queen::jumps_over << std::endl;
-    std::cout << Knight::jumps_over << std::endl;
+    // Knight knight {};
+    ChessPiece* knight = new Knight {};
+    std::cout << knight->jumps_over << std::endl;
+    delete knight;
     return 0;
 }

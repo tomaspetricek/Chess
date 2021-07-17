@@ -9,9 +9,9 @@
 
 
 class Knight: public ChessPiece {
+private:
+    static constexpr const bool def_jumps_over = true;
 public:
-    static const bool jumps_over = true;
-
     explicit Knight(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
 
     ~Knight() override = default;

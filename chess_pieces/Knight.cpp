@@ -5,7 +5,7 @@
 #include "Knight.h"
 
 Knight::Knight(const Position &pos, Player *owner, Color color)
-        : ChessPiece{pos, owner, color} {}
+        : ChessPiece{pos, owner, color, def_jumps_over} {}
 
 bool Knight::valid_move(const Position &pos) {
     return false;

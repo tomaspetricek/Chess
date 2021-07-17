@@ -4,8 +4,8 @@
 
 #include "ChessPiece.h"
 
-ChessPiece::ChessPiece(const Position &pos, Player *owner, Color color)
-        : pos{pos}, owner{owner}, color{color}, has_moved{false} {}
+ChessPiece::ChessPiece(const Position &pos, Player *owner, Color color, bool jumps_over)
+        : pos{pos}, owner{owner}, color{color}, has_moved{false}, jumps_over{jumps_over} {}
 
 Player *ChessPiece::get_owner() const {
     return owner;

@@ -23,9 +23,9 @@ protected:
     bool has_moved;
 
 public:
-    static const bool jumps_over = false;
+    const bool jumps_over;
 
-    explicit ChessPiece(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
+    explicit ChessPiece(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black, bool jumps_over = false);
 
     virtual ~ChessPiece() = default;
 
