@@ -9,6 +9,8 @@
 
 
 class Pawn : public ChessPiece {
+private:
+    static constexpr const int def_id = 6;
 public:
     explicit Pawn(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
 

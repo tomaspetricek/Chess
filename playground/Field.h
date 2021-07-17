@@ -16,7 +16,7 @@ private:
 public:
     Field(Color color);
 
-    bool is_empty();
+    bool is_empty() const;
 
     ChessPiece *get_chess_piece() const;
 

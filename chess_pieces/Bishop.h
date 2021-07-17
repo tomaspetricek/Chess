@@ -10,6 +10,8 @@
 
 
 class Bishop : public ChessPiece {
+private:
+    static constexpr const int def_id = 3;
 public:
     explicit Bishop(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
 

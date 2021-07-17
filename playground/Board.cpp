@@ -3,14 +3,15 @@
 //
 
 #include "Board.h"
-
-
-std::vector<Field>& Board::operator[](int index) {
-    return fields[index];
-}
+#include "iostream"
+#include "../chess_pieces/ChessPiece.h"
 
 Board::Board() {
     set_fields();
+}
+
+std::vector<Field>& Board::operator[](int index) {
+    return fields[index];
 }
 
 std::vector<std::vector<Field>> Board::get_fields() const {
@@ -34,9 +35,33 @@ void Board::set_fields() {
     }
 }
 
-Board::~Board() = default;
+std::ostream &operator<<(std::ostream &os, const Board &board) {
+    int empty {0};
+    ChessPiece *chess_piece {nullptr};
+    int id;
 
-std::ostream &operator<<(std::ostream &os, RowIndex row_idx) {
+    os << std::endl;
+    for (const auto &row : board.fields) {
+        for (const auto &field : row) {
+            if (field.is_empty()){
+                id = empty;
+            } else {
+                chess_piece = field.get_chess_piece();
+                id = chess_piece->get_id();
+
+                if (chess_piece->get_color() == Black) {
+                    id *= -1;
+                }
+            }
+            os << " " << id << " ";
+        }
+        os << std::endl;
+    }
+
+    return os;
+}
+
+std::ostream &operator<<(std::ostream &os, const RowIndex &row_idx) {
     std::string s;
     switch (row_idx) {
         case A:

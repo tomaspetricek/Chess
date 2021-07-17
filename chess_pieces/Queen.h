@@ -9,6 +9,8 @@
 
 
 class Queen: public ChessPiece {
+private:
+    static constexpr const int def_id = 4;
 public:
     Queen(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
 

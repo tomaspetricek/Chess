@@ -14,16 +14,18 @@ enum RowIndex {
     A, B, C, D, E, F, G, H
 };
 
-std::ostream &operator<<(std::ostream &os, RowIndex row_idx);
+std::ostream &operator<<(std::ostream &os, const RowIndex &row_idx);
 
 class Board {
+    friend std::ostream &operator<<(std::ostream &os, const Board &board);
+
 public:
     static const int width{8};
     static const int height{width};
 
     Board();
 
-    ~Board();
+    ~Board() = default;
 
     std::vector<Field> &operator[](int index);
 

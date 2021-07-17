@@ -15,17 +15,18 @@
 
 
 class ChessPiece {
-private:
 protected:
     Position pos;
     Player *owner;
     Color color;
     bool has_moved;
+    int id;
 
 public:
     const bool jumps_over;
 
-    explicit ChessPiece(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black, bool jumps_over = false);
+    explicit ChessPiece(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black,
+                        bool jumps_over = false, int id = 0);
 
     virtual ~ChessPiece() = default;
 
@@ -48,6 +49,10 @@ public:
     bool get_has_moved() const;
 
     void set_has_moved(bool has_moved);
+
+    int get_id() const;
+
+    void set_id(int id);
 };
 
 

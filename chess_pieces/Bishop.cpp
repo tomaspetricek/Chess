@@ -9,4 +9,4 @@ bool Bishop::valid_move(const Position &pos) {
 }
 
 Bishop::Bishop(const Position &pos, Player *owner, Color color)
-        : ChessPiece(pos, owner, color) {}
+        : ChessPiece(pos, owner, color, false, def_id) {}

@@ -11,13 +11,13 @@ Chess::~Chess() {
 }
 
 void Chess::play() {
+
     place_pieces();
 
-    // choose_side();
+    choose_side();
 }
 
 void Chess::place_pieces() {
-    std::cout << A << std::endl;
     /*
     board[0][0].add_chess_piece(new Knight{Black});
     board[0][1].add_chess_piece(new Knight{Black});

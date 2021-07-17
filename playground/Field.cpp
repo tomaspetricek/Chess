@@ -29,3 +29,7 @@ void Field::add_chess_piece(ChessPiece *chess_piece) {
 void Field::remove_chess_piece() {
     this->chess_piece = nullptr;
 }
+
+bool Field::is_empty() const{
+    return (chess_piece == nullptr);
+}
