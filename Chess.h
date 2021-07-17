@@ -1,8 +1,8 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef CHESSS_CHESS_H
+#ifndef CHESS_CHESS_H
 #define CHESS_CHESS_H
 
 #include "playground/Board.h"
@@ -20,13 +20,8 @@
 #include "utils.h"
 #include <typeinfo>
 
+
 class Chess {
-
-public:
-    Chess();
-
-    ~Chess();
-
 private:
     Board board;
     Player *active_player{nullptr};
@@ -41,6 +36,10 @@ private:
     static int ask_active_player(const std::string &question, const std::vector<std::string> &possible_answers);
 
 public:
+    Chess();
+
+    ~Chess();
+
     void play();
 
     void pause();
@@ -53,5 +52,6 @@ public:
 
     bool perform_castling(King* king, Rook* rook);
 };
+
 
 #endif //CHESS_CHESS_H

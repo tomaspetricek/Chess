@@ -1,8 +1,9 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "Board.h"
+
 
 std::vector<Field>& Board::operator[](int index) {
     return fields[index];
@@ -65,4 +66,3 @@ std::ostream &operator<<(std::ostream &os, RowIndex row_idx) {
     };
     return os << s;
 }
-

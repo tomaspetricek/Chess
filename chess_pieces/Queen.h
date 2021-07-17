@@ -1,15 +1,16 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef MINIPROJECTS_QUEEN_H
-#define MINIPROJECTS_QUEEN_H
+#ifndef CHESS_QUEEN_H
+#define CHESS_QUEEN_H
 
 #include "ChessPiece.h"
 
+
 class Queen: public ChessPiece {
 public:
-    explicit Queen(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
+    Queen(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
 
     ~Queen() override = default;
 
@@ -17,4 +18,4 @@ public:
 };
 
 
-#endif //MINIPROJECTS_QUEEN_H
+#endif //CHESS_QUEEN_H

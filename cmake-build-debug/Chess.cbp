@@ -80,7 +80,94 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ChessSet.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ChessSet.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Knight.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Knight.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Pawn.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Pawn.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Queen.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Queen.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Rook.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Rook.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/enums.h">
+			<Option target="Chess"/>
+		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/main.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Field.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Field.h">
 			<Option target="Chess"/>
 		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/CMakeLists.txt">

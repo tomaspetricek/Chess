@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "King.h"
@@ -10,4 +10,3 @@ King::King(const Position &pos, Player *owner, Color color)
 bool King::valid_move(const Position &pos) {
     return false;
 }
-

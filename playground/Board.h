@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #ifndef CHESS_BOARD_H
@@ -8,6 +8,7 @@
 #include "Field.h"
 #include <map>
 #include <string>
+
 
 enum RowIndex {
     A, B, C, D, E, F, G, H
@@ -19,7 +20,6 @@ class Board {
 public:
     static const int width{8};
     static const int height{width};
-
 
     Board();
 
@@ -35,5 +35,6 @@ private:
 public:
     std::vector<std::vector<Field>> get_fields() const;
 };
+
 
 #endif //CHESS_BOARD_H

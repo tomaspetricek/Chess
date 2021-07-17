@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #ifndef CHESS_CHESSSET_H
@@ -20,13 +20,14 @@
 #include "chess_pieces/Pawn.h"
 #include "Position.h"
 
+
 class ChessSet {
 private:
     std::vector<std::vector<ChessPiece*>> pieces {
             {new Rook, new Knight, new Bishop, new Queen,
-             new King, new Bishop, new Knight, new Rook},
+                    new King, new Bishop, new Knight, new Rook},
             {new Pawn, new Pawn, new Pawn, new Pawn,
-             new Pawn, new Pawn, new Pawn, new Pawn}
+                    new Pawn, new Pawn, new Pawn, new Pawn}
     };
 
     Color color;
@@ -42,5 +43,6 @@ public:
 
     ~ChessSet();
 };
+
 
 #endif //CHESS_CHESSSET_H

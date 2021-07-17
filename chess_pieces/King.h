@@ -1,11 +1,12 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef MINIPROJECTS_KING_H
-#define MINIPROJECTS_KING_H
+#ifndef CHESS_KING_H
+#define CHESS_KING_H
 
 #include "ChessPiece.h"
+
 
 class King: public ChessPiece {
 public:
@@ -17,4 +18,4 @@ public:
 };
 
 
-#endif //MINIPROJECTS_KING_H
+#endif //CHESS_KING_H

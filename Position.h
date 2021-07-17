@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #ifndef CHESS_POSITION_H
@@ -21,6 +21,7 @@ public:
 
     void set_y(int y);
 };
+
 
 
 #endif //CHESS_POSITION_H

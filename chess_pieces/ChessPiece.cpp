@@ -1,11 +1,11 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "ChessPiece.h"
 
 ChessPiece::ChessPiece(const Position &pos, Player *owner, Color color)
-        : pos{pos}, owner{owner}, color{color}, jumps_over{jumps_over}, has_moved{false} {}
+        : pos{pos}, owner{owner}, color{color}, has_moved{false} {}
 
 Player *ChessPiece::get_owner() const {
     return owner;
@@ -23,7 +23,7 @@ void ChessPiece::set_color(Color color) {
     ChessPiece::color = color;
 }
 
-bool ChessPiece::is_has_moved() const {
+bool ChessPiece::get_has_moved() const {
     return has_moved;
 }
 

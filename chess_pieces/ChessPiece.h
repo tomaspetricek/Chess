@@ -1,9 +1,9 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef MINIPROJECTS_CHESSPIECE_H
-#define MINIPROJECTS_CHESSPIECE_H
+#ifndef CHESS_CHESSPIECE_H
+#define CHESS_CHESSPIECE_H
 
 #include "../Player.h"
 #include "../Position.h"
@@ -12,6 +12,7 @@
 #include <cmath>
 #include "direction.h"
 // #include "../playground/Board.h"
+
 
 class ChessPiece {
 private:
@@ -44,9 +45,10 @@ public:
 
     void set_color(Color color);
 
-    bool is_has_moved() const;
+    bool get_has_moved() const;
 
     void set_has_moved(bool has_moved);
 };
 
-#endif //MINIPROJECTS_CHESSPIECE_H
+
+#endif //CHESS_CHESSPIECE_H

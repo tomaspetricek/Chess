@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 09.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "direction.h"
@@ -17,4 +17,3 @@ bool go_horizontal_direction(const Position &a, const Position &b){
 bool go_vertical_direction(const Position &a, const Position &b){
     return a.get_y() == b.get_y();
 }
-

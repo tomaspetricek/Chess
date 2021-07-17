@@ -1,11 +1,12 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef MINIPROJECTS_ROOK_H
-#define MINIPROJECTS_ROOK_H
+#ifndef CHESS_ROOK_H
+#define CHESS_ROOK_H
 
 #include "ChessPiece.h"
+
 
 class Rook: public ChessPiece {
 public:
@@ -16,4 +17,5 @@ public:
     bool valid_move(const Position &pos) override;
 };
 
-#endif //MINIPROJECTS_ROOK_H
+
+#endif //CHESS_ROOK_H

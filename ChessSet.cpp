@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "ChessSet.h"
@@ -29,5 +29,3 @@ ChessSet::~ChessSet() {
 
     pieces.clear();
 }
-
-

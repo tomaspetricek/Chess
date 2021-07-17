@@ -1,8 +1,10 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "Position.h"
+
+Position::Position(int x, int y) : x{x}, y{y} {}
 
 int Position::get_x() const {
     return x;
@@ -19,5 +21,3 @@ int Position::get_y() const {
 void Position::set_y(int y) {
     Position::y = y;
 }
-
-Position::Position(int x, int y) : x{x}, y{y} {}

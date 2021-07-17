@@ -1,9 +1,10 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #ifndef CHESS_PLAYER_H
 #define CHESS_PLAYER_H
+
 #include "enums.h"
 
 class Player {

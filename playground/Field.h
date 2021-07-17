@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #ifndef CHESS_FIELD_H
@@ -7,6 +7,7 @@
 
 #include "../chess_pieces/ChessPiece.h"
 #include "../enums.h"
+
 
 class Field {
 private:
@@ -29,5 +30,6 @@ public:
 
     void remove_chess_piece();
 };
+
 
 #endif //CHESS_FIELD_H

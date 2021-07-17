@@ -1,5 +1,5 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
 #include "Chess.h"
@@ -83,4 +83,3 @@ bool Chess::select_piece(int x, int y) {
     std::cout << f.get_color() << std::endl;*/
     return true;
 }
-

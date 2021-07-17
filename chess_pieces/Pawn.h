@@ -1,11 +1,12 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef MINIPROJECTS_PAWN_H
-#define MINIPROJECTS_PAWN_H
+#ifndef CHESS_PAWN_H
+#define CHESS_PAWN_H
 
 #include "ChessPiece.h"
+
 
 class Pawn : public ChessPiece {
 public:
@@ -16,4 +17,5 @@ public:
     bool valid_move(const Position &pos) override;
 };
 
-#endif //MINIPROJECTS_PAWN_H
+
+#endif //CHESS_PAWN_H

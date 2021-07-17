@@ -1,12 +1,13 @@
 //
-// Created by Tomáš Petříček on 07.07.2021.
+// Created by Tomáš Petříček on 17.07.2021.
 //
 
-#ifndef MINIPROJECTS_BISHOP_H
-#define MINIPROJECTS_BISHOP_H
+#ifndef CHESS_BISHOP_H
+#define CHESS_BISHOP_H
 
 #include "ChessPiece.h"
 #include "direction.h"
+
 
 class Bishop : public ChessPiece {
 public:
@@ -18,4 +19,4 @@ public:
 };
 
 
-#endif //MINIPROJECTS_BISHOP_H
+#endif //CHESS_BISHOP_H
