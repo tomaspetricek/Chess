@@ -14,7 +14,7 @@ private:
     ChessPiece *chess_piece{nullptr};
     Color color;
 public:
-    Field(Color color);
+    explicit Field(Color color = Black);
 
     bool is_empty() const;
 

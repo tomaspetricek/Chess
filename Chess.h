@@ -19,6 +19,7 @@
 #include <iostream>
 #include "utils.h"
 #include <typeinfo>
+#include "ChessSet.h"
 
 
 class Chess {
@@ -26,14 +27,29 @@ private:
     Board board;
     Player *active_player{nullptr};
     ChessPiece *selected_piece{nullptr};
+    ChessSet black_chess_set{Black};
+    ChessSet white_chess_set{White};
 
-    void place_pieces();
+    void place_pieces(const ChessSet &chess_set);
 
     void choose_side();
 
+    void make_move();
+
+    void choose_piece();
+
+    void choose_next_position();
+
+    static int choose_row();
+
+    static int choose_col();
+
     void valid_movement();
 
-    static int ask_active_player(const std::string &question, const std::vector<std::string> &possible_answers);
+    static int ask_player(const std::string &question, const std::vector<std::string> &possible_answers);
+
+    template<typename T>
+    static T ask_player(const std::string &question, T min_answer, T max_answer);
 
 public:
     Chess();

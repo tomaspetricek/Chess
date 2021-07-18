@@ -29,3 +29,7 @@ ChessSet::~ChessSet() {
 
     pieces.clear();
 }
+
+const std::vector<std::vector<ChessPiece *>> &ChessSet::get_pieces() const {
+    return pieces;
+}

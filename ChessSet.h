@@ -41,6 +41,8 @@ public:
 
     explicit ChessSet(Color color = Black, Player *owner = nullptr);
 
+    const std::vector<std::vector<ChessPiece *>> &get_pieces() const;
+
     ~ChessSet();
 };
 

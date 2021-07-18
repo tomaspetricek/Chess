@@ -20,14 +20,16 @@ class Board {
     friend std::ostream &operator<<(std::ostream &os, const Board &board);
 
 public:
-    static const int width{8};
-    static const int height{width};
+    static const int n_cols{8};
+    static const int n_rows{n_cols};
 
     Board();
 
     ~Board() = default;
 
     std::vector<Field> &operator[](int index);
+
+    static bool lies_on(const Position &pos);
 
 private:
     std::vector<std::vector<Field>> fields;

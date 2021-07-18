@@ -11,6 +11,7 @@ Board::Board() {
 }
 
 std::vector<Field>& Board::operator[](int index) {
+    //int actual_index = n_rows - index;
     return fields[index];
 }
 
@@ -21,9 +22,9 @@ std::vector<std::vector<Field>> Board::get_fields() const {
 void Board::set_fields() {
     Color color;
 
-    for (int r{0}; r < height; r++) {
+    for (int r{0}; r < n_rows; r++) {
         std::vector<Field> row;
-        for (int c{0}; c < width; c++) {
+        for (int c{0}; c < n_cols; c++) {
             if (r % 2 == 0 && c % 2 == 0 || r % 2 != 0 && c % 2 != 0) {
                 color = White;
             } else {
@@ -59,6 +60,10 @@ std::ostream &operator<<(std::ostream &os, const Board &board) {
     }
 
     return os;
+}
+
+bool Board::lies_on(const Position &pos) {
+    return ((pos.get_x() >= 0 && pos.get_x() < n_cols) && (pos.get_y() >= 0 && pos.get_y() < n_rows));
 }
 
 std::ostream &operator<<(std::ostream &os, const RowIndex &row_idx) {

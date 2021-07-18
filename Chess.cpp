@@ -11,40 +11,85 @@ Chess::~Chess() {
 }
 
 void Chess::play() {
+    place_pieces(black_chess_set);
+    place_pieces(white_chess_set);
+    std::cout << board << std::endl;
 
-    place_pieces();
+    //choose_side();
 
-    choose_side();
+    make_move();
 }
 
-void Chess::place_pieces() {
-    /*
-    board[0][0].add_chess_piece(new Knight{Black});
-    board[0][1].add_chess_piece(new Knight{Black});
-    board[0][2].add_chess_piece(new Bishop{Black});
-    board[0][3].add_chess_piece(new Queen{Black});
-    board[0][4].add_chess_piece(new King{Black});
-    board[0][2].add_chess_piece(new Bishop{Black});
-    board[0][1].add_chess_piece(new Knight{Black});
-    board[0][0].add_chess_piece(new Rook{Black});
+void Chess::make_move() {
+    choose_piece();
+    choose_next_position();
+    //valid_movement();
+}
 
-    // board[1][0].add_chess_piece(new Pawn{Black});
+void Chess::choose_piece() {
+    int row{0}, col{0};
+    bool piece_picked{false};
+    Field field {};
 
-    board[7][0].add_chess_piece(new Rook{White});
-    board[7][1].add_chess_piece(new Knight{White});
-    board[7][2].add_chess_piece(new Bishop{White});
-    board[7][3].add_chess_piece(new Queen{White});
-    board[7][4].add_chess_piece(new King{White});
-    board[7][2].add_chess_piece(new Bishop{White});
-    board[7][1].add_chess_piece(new Knight{White});
-    board[7][0].add_chess_piece(new Rook{White});
-    */
+    do {
+        row = choose_row();
+        col = choose_col();
+        field = board[row][col];
+
+        if (field.is_empty()) {
+            std::cout << "Field is empty." << std::endl;
+            continue;
+        }
+
+        if (field.get_chess_piece()->get_color() == active_player->get_side()) {
+            piece_picked = true;
+            selected_piece = field.get_chess_piece();
+        }
+
+    } while (!piece_picked);
+}
+
+void Chess::choose_next_position() {
+    int row = choose_row();
+    int col = choose_col();
+}
+
+int Chess::choose_row() {
+    std::string question = "Choose row.";
+    int min_row = 1;
+    int max_row = 8;
+    int row = ask_player(question, min_row, max_row);
+    int actual_row = Board::n_rows - row;
+    return actual_row;
+}
+
+int Chess::choose_col() {
+    std::string question = "Choose col.";
+    char min_col = 'A';
+    char max_col = 'H';
+    char col = ask_player(question, min_col, max_col);
+    int actual_col = col - 'A';
+    return actual_col;
+}
+
+void Chess::place_pieces(const ChessSet &chess_set) {
+    Position pos{0, 0};
+    int x = 0, y = 0;
+
+    for (const auto &row : chess_set.get_pieces()) {
+        for (const auto &piece : row) {
+            pos = piece->get_pos();
+            x = pos.get_x();
+            y = pos.get_y();
+            board[y][x].add_chess_piece(piece);
+        }
+    }
 }
 
 void Chess::choose_side() {
     std::string message{"Which side would you like to join?"};
     std::vector<std::string> possible_answers{"Black", "White"};
-    int idx = ask_active_player(message, possible_answers);
+    int idx = ask_player(message, possible_answers);
 
     Color answers[]{Black, White};
     Color color = answers[idx];
@@ -54,7 +99,7 @@ void Chess::choose_side() {
     select_piece(0, 0);
 }
 
-int Chess::ask_active_player(const std::string &question, const std::vector<std::string> &possible_answers) {
+int Chess::ask_player(const std::string &question, const std::vector<std::string> &possible_answers) {
     int answer{0};
     bool valid_answer{false};
 
@@ -82,4 +127,25 @@ bool Chess::select_piece(int x, int y) {
     Field f = board[0][it->second];
     std::cout << f.get_color() << std::endl;*/
     return true;
+}
+
+template<typename T>
+T Chess::ask_player(const std::string &question, T min_answer, T max_answer) {
+    T answer{};
+    bool valid_answer{false};
+
+    std::cout << question << "<" << min_answer << "," << max_answer << ">" << std::endl;
+
+    do {
+        std::cin >> answer;
+
+        if (answer >= min_answer && answer <= max_answer) {
+            valid_answer = true;
+        } else {
+            std::cout << "Entered invalid answer. Try again." << std::endl;
+        }
+
+    } while (!valid_answer);
+
+    return answer;
 }

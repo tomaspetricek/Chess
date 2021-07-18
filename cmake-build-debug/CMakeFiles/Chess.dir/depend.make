@@ -3,6 +3,7 @@
 
 CMakeFiles/Chess.dir/Chess.cpp.o: ../Chess.cpp
 CMakeFiles/Chess.dir/Chess.cpp.o: ../Chess.h
+CMakeFiles/Chess.dir/Chess.cpp.o: ../ChessSet.h
 CMakeFiles/Chess.dir/Chess.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/Chess.cpp.o: ../Position.h
 CMakeFiles/Chess.dir/Chess.cpp.o: ../chess_pieces/Bishop.h
@@ -99,6 +100,7 @@ CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../chess_pieces/direction.cpp
 CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../chess_pieces/direction.h
 
 CMakeFiles/Chess.dir/main.cpp.o: ../Chess.h
+CMakeFiles/Chess.dir/main.cpp.o: ../ChessSet.h
 CMakeFiles/Chess.dir/main.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/main.cpp.o: ../Position.h
 CMakeFiles/Chess.dir/main.cpp.o: ../chess_pieces/Bishop.h
