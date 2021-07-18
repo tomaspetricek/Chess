@@ -25,7 +25,7 @@
 class Chess {
 private:
     Board board;
-    Player *active_player{nullptr};
+    Color active_side;
     ChessPiece *selected_piece{nullptr};
     ChessSet black_chess_set{Black};
     ChessSet white_chess_set{White};

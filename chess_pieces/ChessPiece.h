@@ -17,7 +17,6 @@
 class ChessPiece {
 protected:
     Position pos;
-    Player *owner;
     Color color;
     bool has_moved;
     int id;
@@ -25,7 +24,7 @@ protected:
 public:
     const bool jumps_over;
 
-    explicit ChessPiece(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black,
+    explicit ChessPiece(const Position &pos = {0, 0}, Color color = Black,
                         bool jumps_over = false, int id = 0);
 
     virtual ~ChessPiece() = default;
@@ -37,10 +36,6 @@ public:
     const Position &get_pos() const;
 
     void set_pos(const Position &pos);
-
-    Player *get_owner() const;
-
-    void set_owner(Player *owner);
 
     Color get_color() const;
 

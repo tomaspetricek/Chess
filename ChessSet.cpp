@@ -16,8 +16,7 @@ void ChessSet::set_pieces() {
         for (int x {0}; x < pieces[y].size(); x++){
             piece = pieces[y][x];
             piece->set_color(color);
-            piece->set_owner(owner);
-            piece->set_pos(Position{x, lines[y]});
+            piece->set_pos({x, lines[y]});
         }
     }
 }

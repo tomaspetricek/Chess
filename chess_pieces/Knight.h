@@ -13,7 +13,7 @@ private:
     static constexpr const bool def_jumps_over = true;
     static constexpr const int def_id = 2;
 public:
-    explicit Knight(const Position &pos = {0, 0}, Player *owner = nullptr, Color color = Black);
+    explicit Knight(const Position &pos = {0, 0}, Color color = Black);
 
     ~Knight() override = default;
 

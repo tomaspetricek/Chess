@@ -8,5 +8,5 @@ bool Bishop::valid_move(const Position &pos) {
     return go_diagonal_direction(this->pos, pos);
 }
 
-Bishop::Bishop(const Position &pos, Player *owner, Color color)
-        : ChessPiece(pos, owner, color, false, def_id) {}
+Bishop::Bishop(const Position &pos, Color color)
+        : ChessPiece(pos, color, false, def_id) {}

@@ -4,18 +4,14 @@
 
 #include "Chess.h"
 
-Chess::Chess() : board(Board()), active_player(new Player()) {}
+Chess::Chess() : board{}, active_side{White} {}
 
-Chess::~Chess() {
-    delete active_player;
-}
+Chess::~Chess() = default;
 
 void Chess::play() {
     place_pieces(black_chess_set);
     place_pieces(white_chess_set);
     std::cout << board << std::endl;
-
-    //choose_side();
 
     make_move();
 }
@@ -41,11 +37,13 @@ void Chess::choose_piece() {
             continue;
         }
 
-        if (field.get_chess_piece()->get_color() == active_player->get_side()) {
-            piece_picked = true;
-            selected_piece = field.get_chess_piece();
+        if (field.get_chess_piece()->get_color() != active_side) {
+            std::cout << "Chess piece doesn't belong to you." << std::endl;
+            continue;
         }
 
+        piece_picked = true;
+        selected_piece = field.get_chess_piece();
     } while (!piece_picked);
 }
 
@@ -84,19 +82,6 @@ void Chess::place_pieces(const ChessSet &chess_set) {
             board[y][x].add_chess_piece(piece);
         }
     }
-}
-
-void Chess::choose_side() {
-    std::string message{"Which side would you like to join?"};
-    std::vector<std::string> possible_answers{"Black", "White"};
-    int idx = ask_player(message, possible_answers);
-
-    Color answers[]{Black, White};
-    Color color = answers[idx];
-
-    active_player->set_side(color);
-
-    select_piece(0, 0);
 }
 
 int Chess::ask_player(const std::string &question, const std::vector<std::string> &possible_answers) {

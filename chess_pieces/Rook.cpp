@@ -4,8 +4,8 @@
 
 #include "Rook.h"
 
-Rook::Rook(const Position &pos, Player *owner, Color color)
-        : ChessPiece{pos, owner, color, false, def_id} {}
+Rook::Rook(const Position &pos, Color color)
+        : ChessPiece{pos, color, false, def_id} {}
 
 bool Rook::valid_move(const Position &pos) {
     return (go_vertical_direction(this->pos, pos) || go_horizontal_direction(this->pos, pos));
