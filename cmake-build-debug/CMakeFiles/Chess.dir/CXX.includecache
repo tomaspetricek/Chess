@@ -96,6 +96,14 @@ cmath
 
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/enums.h
 
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.cpp
+Board.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.h
+iostream
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/iostream
+../chess_pieces/ChessPiece.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
+
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.h
 Field.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Field.h

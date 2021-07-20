@@ -71,8 +71,8 @@ void Chess::choose_next_position() {
 
 int Chess::choose_row() {
     std::string question = "Choose row.";
-    int min_row = 1;
-    int max_row = 8;
+    int min_row = Board::min_row_label;
+    int max_row = Board::max_row_label;
     int row = ask_player(question, min_row, max_row);
     int actual_row = Board::n_rows - row;
     return actual_row;
@@ -80,10 +80,10 @@ int Chess::choose_row() {
 
 int Chess::choose_col() {
     std::string question = "Choose col.";
-    char min_col = 'A';
-    char max_col = 'H';
+    char min_col = Board::min_col_label;
+    char max_col = Board::max_col_label;
     char col = ask_player(question, min_col, max_col);
-    int actual_col = col - 'A';
+    int actual_col = col - Board::min_col_label;
     return actual_col;
 }
 
@@ -92,7 +92,7 @@ void Chess::place_pieces(Color color, int front_row, int back_row) {
     Position pos{0, 0};
     int piece;
 
-    for (int c {0}; c < Board::n_cols; c++) {
+    for (int c{0}; c < Board::n_cols; c++) {
         pos = Position{back_row, c};
         piece = (c <= Board::n_cols / 2) ? c : Board::n_cols - c - 1;
 

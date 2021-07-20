@@ -20,8 +20,12 @@ private:
     void set_fields();
 
 public:
-    static const int n_cols{8};
-    static const int n_rows{n_cols};
+    static constexpr const int n_cols{8};
+    static constexpr const int n_rows{n_cols};
+    static constexpr const int min_row_label{1};
+    static constexpr const int max_row_label{n_cols};
+    static constexpr const char min_col_label{'A'};
+    static constexpr const char max_col_label{'H'};
 
     Board();
 
