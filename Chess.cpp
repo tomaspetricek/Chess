@@ -88,16 +88,38 @@ int Chess::choose_col() {
 }
 
 void Chess::place_pieces(Color color, int front_row, int back_row) {
-    board[back_row][0]->add_chess_piece(std::make_shared<Rook>(Position{back_row, 0}, color));
-    board[back_row][1]->add_chess_piece(std::make_shared<Knight>(Position{back_row, 1}, color));
-    board[back_row][2]->add_chess_piece(std::make_shared<Bishop>(Position{back_row, 2}, color));
-    board[back_row][3]->add_chess_piece(std::make_shared<Queen>(Position{back_row, 3}, color));
-    board[back_row][4]->add_chess_piece(std::make_shared<King>(Position{back_row, 4}, color));
-    board[back_row][5]->add_chess_piece(std::make_shared<Bishop>(Position{back_row, 5}, color));
-    board[back_row][6]->add_chess_piece(std::make_shared<Knight>(Position{back_row, 6}, color));
-    board[back_row][7]->add_chess_piece(std::make_shared<Rook>(Position{back_row, 7}, color));
+    std::shared_ptr<ChessPiece> ptr;
+    Position pos{0, 0};
+    int piece;
 
-    for (int c{0}; c < Board::n_cols; c++) {
+    for (int c {0}; c < Board::n_cols; c++) {
+        pos = Position{back_row, c};
+        piece = (c <= Board::n_cols / 2) ? c : Board::n_cols - c - 1;
+
+        switch (piece) {
+            case 0:
+                ptr = std::make_shared<Rook>(pos, color);
+                break;
+            case 1:
+                ptr = std::make_shared<Knight>(pos, color);
+                break;
+            case 2:
+                ptr = std::make_shared<Bishop>(pos, color);
+                break;
+            case 3:
+                ptr = std::make_shared<Queen>(pos, color);
+                break;
+            case 4:
+                ptr = std::make_shared<King>(pos, color);
+                break;
+            default:
+                break;
+        }
+
+        // add piece to back row
+        board[back_row][c]->add_chess_piece(ptr);
+
+        // add piece to front row
         board[front_row][c]->add_chess_piece(std::make_shared<Pawn>(Position{front_row, c}, color));
     }
 }
