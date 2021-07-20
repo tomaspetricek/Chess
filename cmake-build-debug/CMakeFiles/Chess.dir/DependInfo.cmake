@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Chess.cpp.o"
-  "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ChessSet.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/ChessSet.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Player.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Position.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o"

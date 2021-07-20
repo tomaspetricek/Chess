@@ -8,16 +8,16 @@
 #include "Field.h"
 #include <map>
 #include <string>
+#include <memory>
 
-
-enum RowIndex {
-    A, B, C, D, E, F, G, H
-};
-
-std::ostream &operator<<(std::ostream &os, const RowIndex &row_idx);
 
 class Board {
     friend std::ostream &operator<<(std::ostream &os, const Board &board);
+
+private:
+    std::vector<std::vector<std::shared_ptr<Field>>> fields;
+
+    void set_fields();
 
 public:
     static const int n_cols{8};
@@ -27,17 +27,11 @@ public:
 
     ~Board() = default;
 
-    std::vector<Field> &operator[](int index);
+    std::vector<std::shared_ptr<Field>>& operator[](int index);
 
     static bool lies_on(const Position &pos);
 
-private:
-    std::vector<std::vector<Field>> fields;
-
-    void set_fields();
-
-public:
-    std::vector<std::vector<Field>> get_fields() const;
+    std::vector<std::vector<std::shared_ptr<Field>>> get_fields() const;
 };
 
 

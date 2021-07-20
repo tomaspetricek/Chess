@@ -86,12 +86,6 @@
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ChessSet.cpp">
-			<Option target="Chess"/>
-		</Unit>
-		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ChessSet.h">
-			<Option target="Chess"/>
-		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.cpp">
 			<Option target="Chess"/>
 		</Unit>

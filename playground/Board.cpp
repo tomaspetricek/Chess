@@ -10,27 +10,22 @@ Board::Board() {
     set_fields();
 }
 
-std::vector<Field>& Board::operator[](int index) {
-    //int actual_index = n_rows - index;
+std::vector<std::shared_ptr<Field>>& Board::operator[](int index) {
     return fields[index];
-}
-
-std::vector<std::vector<Field>> Board::get_fields() const {
-    return fields;
 }
 
 void Board::set_fields() {
     Color color;
 
     for (int r{0}; r < n_rows; r++) {
-        std::vector<Field> row;
+        std::vector<std::shared_ptr<Field>> row;
         for (int c{0}; c < n_cols; c++) {
             if (r % 2 == 0 && c % 2 == 0 || r % 2 != 0 && c % 2 != 0) {
                 color = White;
             } else {
                 color = Black;
             }
-            row.emplace_back(color);
+            row.push_back(std::make_shared<Field>(color));
         }
         fields.push_back(row);
     }
@@ -38,16 +33,16 @@ void Board::set_fields() {
 
 std::ostream &operator<<(std::ostream &os, const Board &board) {
     int empty {0};
-    ChessPiece *chess_piece {nullptr};
+    std::shared_ptr<ChessPiece> chess_piece;
     int id;
 
     os << std::endl;
     for (const auto &row : board.fields) {
         for (const auto &field : row) {
-            if (field.is_empty()){
+            if (field->is_empty()){
                 id = empty;
             } else {
-                chess_piece = field.get_chess_piece();
+                chess_piece = field->get_chess_piece();
                 id = chess_piece->get_id();
 
                 if (chess_piece->get_color() == Black) {
@@ -66,33 +61,6 @@ bool Board::lies_on(const Position &pos) {
     return ((pos.get_x() >= 0 && pos.get_x() < n_cols) && (pos.get_y() >= 0 && pos.get_y() < n_rows));
 }
 
-std::ostream &operator<<(std::ostream &os, const RowIndex &row_idx) {
-    std::string s;
-    switch (row_idx) {
-        case A:
-            s = "A";
-            break;
-        case B:
-            s = "B";
-            break;
-        case C:
-            s = "C";
-            break;
-        case D:
-            s = "D";
-            break;
-        case E:
-            s = "E";
-            break;
-        case F:
-            s = "F";
-            break;
-        case G:
-            s = "G";
-            break;
-        case H:
-            s = "H";
-            break;
-    };
-    return os << s;
+std::vector<std::vector<std::shared_ptr<Field>>> Board::get_fields() const {
+    return std::vector<std::vector<std::shared_ptr<Field>>>();
 }

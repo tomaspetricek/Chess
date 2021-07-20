@@ -7,26 +7,27 @@
 
 #include "../chess_pieces/ChessPiece.h"
 #include "../enums.h"
+#include <memory>
 
 
 class Field {
 private:
-    ChessPiece *chess_piece{nullptr};
+    std::shared_ptr<ChessPiece> chess_piece;
     Color color;
 public:
     explicit Field(Color color = Black);
 
     bool is_empty() const;
 
-    ChessPiece *get_chess_piece() const;
+    const std::shared_ptr<ChessPiece> & get_chess_piece() const;
 
-    void set_chess_piece(ChessPiece *chess_piece);
+    void set_chess_piece(const std::shared_ptr<ChessPiece> &chess_piece);
 
     Color get_color() const;
 
     void set_color(Color color);
 
-    void add_chess_piece(ChessPiece *chess_piece);
+    void add_chess_piece(const std::shared_ptr<ChessPiece>& chess_piece_ptr);
 
     void remove_chess_piece();
 };

@@ -19,20 +19,17 @@
 #include <iostream>
 #include "utils.h"
 #include <typeinfo>
-#include "ChessSet.h"
+#include <memory>
 
 
 class Chess {
 private:
     Board board;
     Color active_side;
-    ChessPiece *selected_piece{nullptr};
-    ChessSet black_chess_set{Black};
-    ChessSet white_chess_set{White};
+    std::shared_ptr<ChessPiece> selected_piece;
+    std::shared_ptr<Field> selected_field;
 
-    void place_pieces(const ChessSet &chess_set);
-
-    void choose_side();
+    void place_pieces(Color color, int front_row, int back_row);
 
     void make_move();
 
@@ -66,7 +63,7 @@ public:
 
     bool move_selected_piece(int x, int y);
 
-    bool perform_castling(King* king, Rook* rook);
+    // bool perform_castling(King* king, Rook* rook);
 };
 
 

@@ -170,33 +170,6 @@ Chess.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Chess.cpp.s
 .PHONY : Chess.cpp.s
 
-ChessSet.o: ChessSet.cpp.o
-
-.PHONY : ChessSet.o
-
-# target to build an object file
-ChessSet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/ChessSet.cpp.o
-.PHONY : ChessSet.cpp.o
-
-ChessSet.i: ChessSet.cpp.i
-
-.PHONY : ChessSet.i
-
-# target to preprocess a source file
-ChessSet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/ChessSet.cpp.i
-.PHONY : ChessSet.cpp.i
-
-ChessSet.s: ChessSet.cpp.s
-
-.PHONY : ChessSet.s
-
-# target to generate assembly for a file
-ChessSet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/ChessSet.cpp.s
-.PHONY : ChessSet.cpp.s
-
 Player.o: Player.cpp.o
 
 .PHONY : Player.o
@@ -560,9 +533,6 @@ help:
 	@echo "... Chess.o"
 	@echo "... Chess.i"
 	@echo "... Chess.s"
-	@echo "... ChessSet.o"
-	@echo "... ChessSet.i"
-	@echo "... ChessSet.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
