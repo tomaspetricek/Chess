@@ -5,6 +5,7 @@
 #include "Board.h"
 #include "iostream"
 #include "../chess_pieces/ChessPiece.h"
+#include "../Position.h"
 
 Board::Board() {
     set_fields();
@@ -16,6 +17,7 @@ std::vector<std::shared_ptr<Field>>& Board::operator[](int index) {
 
 void Board::set_fields() {
     Color color;
+    Position pos {0, 0};
 
     for (int r{0}; r < n_rows; r++) {
         std::vector<std::shared_ptr<Field>> row;
@@ -25,7 +27,8 @@ void Board::set_fields() {
             } else {
                 color = Black;
             }
-            row.push_back(std::make_shared<Field>(color));
+            pos = {r, c};
+            row.push_back(std::make_shared<Field>(color, pos));
         }
         fields.push_back(row);
     }

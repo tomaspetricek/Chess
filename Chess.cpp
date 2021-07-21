@@ -19,7 +19,8 @@ void Chess::play() {
 void Chess::make_move() {
     choose_piece();
     choose_next_position();
-    //valid_movement();
+    bool valid_move = valid_movement();
+    std::cout << valid_move << std::endl;
 }
 
 void Chess::choose_piece() {
@@ -43,7 +44,7 @@ void Chess::choose_piece() {
         }
 
         piece_picked = true;
-        selected_piece = field->get_chess_piece();
+        selected_piece_ptr = field->get_chess_piece();
     } while (!piece_picked);
 }
 
@@ -64,7 +65,7 @@ void Chess::choose_next_position() {
             }
         }
 
-        selected_field = field;
+        selected_field_ptr = field;
         position_picked = true;
     } while (!position_picked);
 }
@@ -117,10 +118,10 @@ void Chess::place_pieces(Color color, int front_row, int back_row) {
         }
 
         // add piece to back row
-        board[back_row][c]->add_chess_piece(ptr);
+        board[back_row][c]->set_piece_ptr(ptr);
 
         // add piece to front row
-        board[front_row][c]->add_chess_piece(std::make_shared<Pawn>(Position{front_row, c}, color));
+        board[front_row][c]->set_piece_ptr(std::make_shared<Pawn>(Position{front_row, c}, color));
     }
 }
 
@@ -166,4 +167,8 @@ T Chess::ask_player(const std::string &question, T min_answer, T max_answer) {
     } while (!valid_answer);
 
     return answer;
+}
+
+bool Chess::valid_movement() {
+    return selected_piece_ptr->valid_move(selected_field_ptr->get_pos());
 }

@@ -26,8 +26,8 @@ class Chess {
 private:
     Board board;
     Color active_side;
-    std::shared_ptr<ChessPiece> selected_piece;
-    std::shared_ptr<Field> selected_field;
+    std::shared_ptr<ChessPiece> selected_piece_ptr;
+    std::shared_ptr<Field> selected_field_ptr;
 
     void place_pieces(Color color, int front_row, int back_row);
 
@@ -41,7 +41,7 @@ private:
 
     static int choose_col();
 
-    void valid_movement();
+    bool valid_movement();
 
     static int ask_player(const std::string &question, const std::vector<std::string> &possible_answers);
 

@@ -12,24 +12,27 @@
 
 class Field {
 private:
-    std::shared_ptr<ChessPiece> chess_piece;
+    std::shared_ptr<ChessPiece> piece_ptr;
     Color color;
+    const Position pos;
 public:
-    explicit Field(Color color = Black);
+    explicit Field(Color color = Black, Position pos = {0, 0});
 
     bool is_empty() const;
 
     const std::shared_ptr<ChessPiece> & get_chess_piece() const;
 
-    void set_chess_piece(const std::shared_ptr<ChessPiece> &chess_piece);
-
     Color get_color() const;
 
     void set_color(Color color);
 
-    void add_chess_piece(const std::shared_ptr<ChessPiece>& chess_piece_ptr);
-
     void remove_chess_piece();
+
+    const std::shared_ptr<ChessPiece> &get_piece_ptr() const;
+
+    void set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr);
+
+    const Position &get_pos() const;
 };
 
 

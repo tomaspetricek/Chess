@@ -11,7 +11,7 @@ private:
     int x;
     int y;
 public:
-    Position(int x, int y);
+    explicit Position(int x = 0, int y = 0);
 
     int get_x() const;
 

@@ -6,7 +6,7 @@
 
 #include <utility>
 
-Field::Field(Color color) : color(color) {}
+Field::Field(Color color, Position pos) : color{color}, pos{pos} {}
 
 Color Field::get_color() const {
     return color;
@@ -16,22 +16,26 @@ void Field::set_color(Color color) {
     Field::color = color;
 }
 
-void Field::add_chess_piece(const std::shared_ptr<ChessPiece>& chess_piece_ptr) {
-    this->chess_piece = chess_piece_ptr;
-}
-
 void Field::remove_chess_piece() {
-    this->chess_piece = nullptr;
+    this->piece_ptr = nullptr;
 }
 
 bool Field::is_empty() const{
-    return (chess_piece == nullptr);
+    return (piece_ptr == nullptr);
 }
 
 const std::shared_ptr<ChessPiece> & Field::get_chess_piece() const {
-    return chess_piece;
+    return piece_ptr;
 }
 
-void Field::set_chess_piece(const std::shared_ptr<ChessPiece> &chess_piece) {
-    Field::chess_piece = chess_piece;
+const std::shared_ptr<ChessPiece> &Field::get_piece_ptr() const {
+    return piece_ptr;
+}
+
+void Field::set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr) {
+    Field::piece_ptr = piece_ptr;
+}
+
+const Position &Field::get_pos() const {
+    return pos;
 }
