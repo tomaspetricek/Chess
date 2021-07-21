@@ -27,8 +27,8 @@ void Board::set_fields() {
             } else {
                 color = Black;
             }
-            pos = {r, c};
-            row.push_back(std::make_shared<Field>(color, pos));
+            pos = Position{r, c};
+            row.push_back(std::make_shared<Field>(pos, color));
         }
         fields.push_back(row);
     }

@@ -12,7 +12,7 @@ class Queen: public ChessPiece {
 private:
     static constexpr const int def_id = 4;
 public:
-    Queen(const Position &pos = {0, 0}, Color color = Black);
+    Queen(const Position &pos, Color color = Black);
 
     ~Queen() override = default;
 

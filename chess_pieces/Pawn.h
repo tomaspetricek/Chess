@@ -12,7 +12,7 @@ class Pawn : public ChessPiece {
 private:
     static constexpr const int def_id = 6;
 public:
-    explicit Pawn(const Position &pos = {0, 0}, Color color = Black);
+    explicit Pawn(const Position &pos, Color color = Black);
 
     ~Pawn() override = default;
 

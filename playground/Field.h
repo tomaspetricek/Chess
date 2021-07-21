@@ -16,7 +16,7 @@ private:
     Color color;
     const Position pos;
 public:
-    explicit Field(Color color = Black, Position pos = {0, 0});
+    explicit Field(Position pos, Color color = Black);
 
     bool is_empty() const;
 

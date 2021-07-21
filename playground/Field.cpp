@@ -6,7 +6,7 @@
 
 #include <utility>
 
-Field::Field(Color color, Position pos) : color{color}, pos{pos} {}
+Field::Field(Position pos, Color color) : pos{pos}, color{color}{}
 
 Color Field::get_color() const {
     return color;

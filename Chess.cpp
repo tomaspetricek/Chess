@@ -11,16 +11,26 @@ Chess::~Chess() = default;
 void Chess::play() {
     place_pieces(Black, 1, 0);
     place_pieces(White, Board::n_rows - 2, Board::n_rows - 1);
-    std::cout << board << std::endl;
 
-    make_move();
+    do {
+        std::cout << board << std::endl;
+
+        make_move();
+
+        active_side = (active_side == Black) ? White : Black;
+    } while(true);
 }
 
 void Chess::make_move() {
-    choose_piece();
-    choose_next_position();
-    bool valid_move = valid_movement();
-    std::cout << valid_move << std::endl;
+    bool valid_move {false};
+
+    do {
+        choose_piece();
+        choose_next_field();
+        valid_move = valid_movement();
+    } while(!valid_move);
+
+    selected_field_ptr->set_piece_ptr(selected_piece_ptr);
 }
 
 void Chess::choose_piece() {
@@ -48,7 +58,7 @@ void Chess::choose_piece() {
     } while (!piece_picked);
 }
 
-void Chess::choose_next_position() {
+void Chess::choose_next_field() {
     int row{0}, col{0};
     bool position_picked{false};
     std::shared_ptr<Field> field;

@@ -35,7 +35,7 @@ private:
 
     void choose_piece();
 
-    void choose_next_position();
+    void choose_next_field();
 
     static int choose_row();
 

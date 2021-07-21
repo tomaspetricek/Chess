@@ -24,7 +24,7 @@ protected:
 public:
     const bool jumps_over;
 
-    explicit ChessPiece(const Position &pos = {0, 0}, Color color = Black,
+    explicit ChessPiece(const Position &pos, Color color = Black,
                         bool jumps_over = false, int id = 0);
 
     virtual ~ChessPiece() = default;

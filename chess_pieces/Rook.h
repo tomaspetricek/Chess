@@ -12,7 +12,7 @@ class Rook: public ChessPiece {
 private:
     static constexpr const int def_id = 1;
 public:
-    explicit Rook(const Position &pos = {0, 0}, Color color = Black);
+    explicit Rook(const Position &pos, Color color = Black);
 
     ~Rook() override = default;
 
