@@ -12,8 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b6f149b-6bfa-4292-b596-23d8c566423a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/chess_pieces/King.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/King.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chess_pieces/King.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/King.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,9 +45,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -73,6 +73,7 @@
       <workItem from="1626804668379" duration="1791000" />
       <workItem from="1626858833865" duration="1784000" />
       <workItem from="1626861798411" duration="343000" />
+      <workItem from="1626863007611" duration="406000" />
     </task>
     <servers />
   </component>
