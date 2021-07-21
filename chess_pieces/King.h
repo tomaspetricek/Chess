@@ -12,7 +12,7 @@ class King: public ChessPiece {
 private:
     static constexpr const int def_id = 5;
 public:
-    explicit King(const Position &pos = {0, 0}, Color color = Black);
+    explicit King(const Position &pos, Color color = Black);
 
     ~King() override = default;
 
