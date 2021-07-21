@@ -24,11 +24,11 @@ public:
 
     void set_color(Color color);
 
-    void remove_chess_piece();
-
-    std::unique_ptr<ChessPiece> &get_piece_ptr();
+    const std::unique_ptr<ChessPiece> &get_piece_ptr() const;
 
     void set_piece_ptr(std::unique_ptr<ChessPiece> piece_ptr);
+
+    std::unique_ptr<ChessPiece> &move_piece_ptr();
 
     const Position &get_pos() const;
 };

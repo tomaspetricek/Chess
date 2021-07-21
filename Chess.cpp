@@ -54,7 +54,7 @@ void Chess::choose_piece() {
         }
 
         piece_picked = true;
-        selected_piece_ptr = std::move(field->get_piece_ptr());
+        selected_piece_ptr = std::move(field->move_piece_ptr());
     } while (!piece_picked);
 }
 
