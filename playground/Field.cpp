@@ -24,18 +24,14 @@ bool Field::is_empty() const{
     return (piece_ptr == nullptr);
 }
 
-const std::shared_ptr<ChessPiece> & Field::get_chess_piece() const {
-    return piece_ptr;
-}
-
-const std::shared_ptr<ChessPiece> &Field::get_piece_ptr() const {
-    return piece_ptr;
-}
-
-void Field::set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr) {
-    Field::piece_ptr = piece_ptr;
-}
-
 const Position &Field::get_pos() const {
     return pos;
+}
+
+std::unique_ptr<ChessPiece> &Field::get_piece_ptr() {
+    return piece_ptr;
+}
+
+void Field::set_piece_ptr(std::unique_ptr<ChessPiece> piece_ptr) {
+    Field::piece_ptr = std::move(piece_ptr);
 }

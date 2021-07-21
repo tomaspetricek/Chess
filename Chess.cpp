@@ -18,19 +18,19 @@ void Chess::play() {
         make_move();
 
         active_side = (active_side == Black) ? White : Black;
-    } while(true);
+    } while (true);
 }
 
 void Chess::make_move() {
-    bool valid_move {false};
+    bool valid_move{false};
 
     do {
         choose_piece();
         choose_next_field();
         valid_move = valid_movement();
-    } while(!valid_move);
+    } while (!valid_move);
 
-    selected_field_ptr->set_piece_ptr(selected_piece_ptr);
+    selected_field_ptr->set_piece_ptr(std::move(selected_piece_ptr));
 }
 
 void Chess::choose_piece() {
@@ -48,13 +48,13 @@ void Chess::choose_piece() {
             continue;
         }
 
-        if (field->get_chess_piece()->get_color() != active_side) {
+        if (field->get_piece_ptr()->get_color() != active_side) {
             std::cout << "Chess piece doesn't belong to you." << std::endl;
             continue;
         }
 
         piece_picked = true;
-        selected_piece_ptr = field->get_chess_piece();
+        selected_piece_ptr = std::move(field->get_piece_ptr());
     } while (!piece_picked);
 }
 
@@ -69,7 +69,7 @@ void Chess::choose_next_field() {
         field = board[row][col];
 
         if (!field->is_empty()) {
-            if (field->get_chess_piece()->get_color() == active_side) {
+            if (field->get_piece_ptr()->get_color() == active_side) {
                 std::cout << "Your chess piece already occupies that field." << std::endl;
                 continue;
             }
@@ -99,7 +99,7 @@ int Chess::choose_col() {
 }
 
 void Chess::place_pieces(Color color, int front_row, int back_row) {
-    std::shared_ptr<ChessPiece> ptr;
+    std::unique_ptr<ChessPiece> ptr;
     Position pos{0, 0};
     int piece;
 
@@ -109,29 +109,29 @@ void Chess::place_pieces(Color color, int front_row, int back_row) {
 
         switch (piece) {
             case 0:
-                ptr = std::make_shared<Rook>(pos, color);
+                ptr = std::make_unique<Rook>(pos, color);
                 break;
             case 1:
-                ptr = std::make_shared<Knight>(pos, color);
+                ptr = std::make_unique<Knight>(pos, color);
                 break;
             case 2:
-                ptr = std::make_shared<Bishop>(pos, color);
+                ptr = std::make_unique<Bishop>(pos, color);
                 break;
             case 3:
-                ptr = std::make_shared<Queen>(pos, color);
+                ptr = std::make_unique<Queen>(pos, color);
                 break;
             case 4:
-                ptr = std::make_shared<King>(pos, color);
+                ptr = std::make_unique<King>(pos, color);
                 break;
             default:
                 break;
         }
 
         // add piece to back row
-        board[back_row][c]->set_piece_ptr(ptr);
+        board[back_row][c]->set_piece_ptr(std::move(ptr));
 
         // add piece to front row
-        board[front_row][c]->set_piece_ptr(std::make_shared<Pawn>(Position{front_row, c}, color));
+        board[front_row][c]->set_piece_ptr(std::make_unique<Pawn>(Position{front_row, c}, color));
     }
 }
 

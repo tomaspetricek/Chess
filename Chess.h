@@ -26,7 +26,7 @@ class Chess {
 private:
     Board board;
     Color active_side;
-    std::shared_ptr<ChessPiece> selected_piece_ptr;
+    std::unique_ptr<ChessPiece> selected_piece_ptr;
     std::shared_ptr<Field> selected_field_ptr;
 
     void place_pieces(Color color, int front_row, int back_row);

@@ -36,7 +36,6 @@ void Board::set_fields() {
 
 std::ostream &operator<<(std::ostream &os, const Board &board) {
     int empty {0};
-    std::shared_ptr<ChessPiece> chess_piece;
     int id;
 
     os << std::endl;
@@ -45,7 +44,7 @@ std::ostream &operator<<(std::ostream &os, const Board &board) {
             if (field->is_empty()){
                 id = empty;
             } else {
-                chess_piece = field->get_chess_piece();
+                const auto &chess_piece = field->get_piece_ptr();
                 id = chess_piece->get_id();
 
                 if (chess_piece->get_color() == Black) {
