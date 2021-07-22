@@ -44,12 +44,12 @@ void Chess::choose_piece() {
         field = board[row][col];
 
         if (field->is_empty()) {
-            std::cout << "Field is empty." << std::endl;
+            std::cerr << "Field is empty." << std::endl;
             continue;
         }
 
         if (field->get_piece_ptr()->get_color() != active_side) {
-            std::cout << "Chess piece doesn't belong to you." << std::endl;
+            std::cerr << "Chess piece doesn't belong to you." << std::endl;
             continue;
         }
 
@@ -70,7 +70,7 @@ void Chess::choose_next_field() {
 
         if (!field->is_empty()) {
             if (field->get_piece_ptr()->get_color() == active_side) {
-                std::cout << "Your chess piece already occupies that field." << std::endl;
+                std::cerr << "Your chess piece already occupies that field." << std::endl;
                 continue;
             }
         }
@@ -147,10 +147,18 @@ int Chess::ask_player(const std::string &question, const std::vector<std::string
 
         std::cin >> answer;
 
+        // check if user entered valid input type
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cerr << "Invalid input type" << std::endl;
+            continue;
+        }
+
         if (answer > 0 && answer <= possible_answers.size()) {
             valid_answer = true;
         } else {
-            std::cout << "Entered invalid answer. Try again." << std::endl;
+            std::cerr << "Input out of range." << std::endl;
         }
 
     } while (!valid_answer);
@@ -168,10 +176,18 @@ T Chess::ask_player(const std::string &question, T min_answer, T max_answer) {
     do {
         std::cin >> answer;
 
+        // check if user entered valid input type
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cerr << "Invalid input type." << std::endl;
+            continue;
+        }
+
         if (answer >= min_answer && answer <= max_answer) {
             valid_answer = true;
         } else {
-            std::cout << "Entered invalid answer. Try again." << std::endl;
+            std::cerr << "Input out of range." << std::endl;
         }
 
     } while (!valid_answer);
