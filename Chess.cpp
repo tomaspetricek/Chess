@@ -3,6 +3,8 @@
 //
 
 #include "Chess.h"
+#include <stdexcept>
+#include <iostream>
 
 Chess::Chess() : board{}, active_side{White} {}
 
@@ -141,27 +143,24 @@ int Chess::ask_player(const std::string &question, const std::vector<std::string
 
     std::cout << question << std::endl;
 
-    do {
-        for (int i{0}; i < possible_answers.size(); i++)
-            std::cout << i + 1 << ": " << possible_answers[i] << std::endl;
+    for (int i{0}; i < possible_answers.size(); i++)
+        std::cout << i + 1 << ": " << possible_answers[i] << std::endl;
 
-        std::cin >> answer;
+    std::cin >> answer;
 
-        // check if user entered valid input type
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cerr << "Invalid input type" << std::endl;
-            continue;
-        }
+    // check if user entered valid input type
+    if (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        throw std::invalid_argument{"Invalid input type."};
+    }
 
-        if (answer > 0 && answer <= possible_answers.size()) {
-            valid_answer = true;
-        } else {
-            std::cerr << "Input out of range." << std::endl;
-        }
-
-    } while (!valid_answer);
+    if (answer < 0 || answer > possible_answers.size()) {
+        std::stringstream ss{};
+        ss << "Input " << answer << " is out of range.";
+        ss << "Expected input within range <" << 0 << ";" << possible_answers.size() << ">.";
+        throw std::out_of_range{ss.str()};
+    }
 
     return answer;
 }
@@ -173,24 +172,21 @@ T Chess::ask_player(const std::string &question, T min_answer, T max_answer) {
 
     std::cout << question << "<" << min_answer << "," << max_answer << ">" << std::endl;
 
-    do {
-        std::cin >> answer;
+    std::cin >> answer;
 
-        // check if user entered valid input type
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cerr << "Invalid input type." << std::endl;
-            continue;
-        }
+    // check if user entered valid input type
+    if (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        throw std::invalid_argument{"Invalid input type."};
+    }
 
-        if (answer >= min_answer && answer <= max_answer) {
-            valid_answer = true;
-        } else {
-            std::cerr << "Input out of range." << std::endl;
-        }
-
-    } while (!valid_answer);
+    if (answer < min_answer || answer > max_answer) {
+        std::stringstream ss {};
+        ss << "Input " << answer << " is out of range.";
+        ss << "Expected input within range <" << min_answer << ";" << max_answer << ">.";
+        throw std::out_of_range{ss.str()};
+    }
 
     return answer;
 }

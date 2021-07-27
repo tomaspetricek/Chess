@@ -11,3 +11,5 @@
 ##  ChessPiece
 - add move method
 - remove position setter
+
+- create class Asker

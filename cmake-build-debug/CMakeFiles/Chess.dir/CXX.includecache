@@ -9,6 +9,10 @@
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.cpp
 Chess.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
+stdexcept
+-
+iostream
+-
 
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
 playground/Board.h

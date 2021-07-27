@@ -14,7 +14,7 @@
     <list default="true" id="3b6f149b-6bfa-4292-b596-23d8c566423a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Chess" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Chess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +73,9 @@
       <workItem from="1626876234749" duration="547000" />
       <workItem from="1626880934251" duration="3131000" />
       <workItem from="1626897248141" duration="156000" />
-      <workItem from="1626936360888" duration="970000" />
+      <workItem from="1626936360888" duration="1062000" />
+      <workItem from="1627412178861" duration="279000" />
+      <workItem from="1627412463529" duration="898000" />
     </task>
     <servers />
   </component>
@@ -102,12 +104,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Chess.cpp</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Chess.cpp</url>
-          <line>32</line>
+          <line>34</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
