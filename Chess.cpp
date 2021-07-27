@@ -5,97 +5,56 @@
 #include "Chess.h"
 #include <stdexcept>
 #include <iostream>
+#include "IllegalMove.h"
 
-Chess::Chess() : board{}, active_side{White} {}
-
-Chess::~Chess() = default;
-
-void Chess::play() {
+Chess::Chess() : board{}, active_side{White} {
     place_pieces(Black, 1, 0);
     place_pieces(White, Board::n_rows - 2, Board::n_rows - 1);
-
-    do {
-        std::cout << board << std::endl;
-
-        make_move();
-
-        active_side = (active_side == Black) ? White : Black;
-    } while (true);
 }
+
+Chess::~Chess() = default;
 
 void Chess::make_move() {
     bool valid_move{false};
 
-    do {
-        choose_piece();
-        choose_next_field();
-        valid_move = valid_movement();
-    } while (!valid_move);
+    choose_piece();
+    choose_next_field();
+    valid_move = valid_movement();
+
+    if (!valid_move)
+        throw IllegalMove{};
 
     selected_field_ptr->set_piece_ptr(std::move(selected_piece_ptr));
 }
 
-void Chess::choose_piece() {
-    int row{0}, col{0};
-    bool piece_picked{false};
-    std::shared_ptr<Field> field;
+void Chess::choose_piece(int row, int col) {
+    std::shared_ptr<Field> field = board[row][col];
 
-    do {
-        row = choose_row();
-        col = choose_col();
-        field = board[row][col];
+    if (field->is_empty())
+        throw std::invalid_argument{"Field is empty."};
 
-        if (field->is_empty()) {
-            std::cerr << "Field is empty." << std::endl;
-            continue;
-        }
+    if (field->get_piece_ptr()->get_color() != active_side)
+        throw std::invalid_argument{"Chess piece doesn't belong to you."};
 
-        if (field->get_piece_ptr()->get_color() != active_side) {
-            std::cerr << "Chess piece doesn't belong to you." << std::endl;
-            continue;
-        }
-
-        piece_picked = true;
-        selected_piece_ptr = std::move(field->move_piece_ptr());
-    } while (!piece_picked);
+    selected_piece_ptr = std::move(field->move_piece_ptr());
 }
 
-void Chess::choose_next_field() {
-    int row{0}, col{0};
-    bool position_picked{false};
-    std::shared_ptr<Field> field;
+void Chess::choose_next_field(int row, int col) {
+    std::shared_ptr<Field> field = board[row][col];
 
-    do {
-        row = choose_row();
-        col = choose_col();
-        field = board[row][col];
+    if (!field->is_empty())
+        if (field->get_piece_ptr()->get_color() == active_side)
+            throw std::invalid_argument{"Your chess piece already occupies that field."};
 
-        if (!field->is_empty()) {
-            if (field->get_piece_ptr()->get_color() == active_side) {
-                std::cerr << "Your chess piece already occupies that field." << std::endl;
-                continue;
-            }
-        }
-
-        selected_field_ptr = field;
-        position_picked = true;
-    } while (!position_picked);
+    selected_field_ptr = field;
 }
 
-int Chess::choose_row() {
-    std::string question = "Choose row.";
-    int min_row = Board::min_row_label;
-    int max_row = Board::max_row_label;
-    int row = ask_player(question, min_row, max_row);
+int Chess::select_row(int row) {
     int actual_row = Board::n_rows - row;
     return actual_row;
 }
 
-int Chess::choose_col() {
-    std::string question = "Choose col.";
-    char min_col = Board::min_col_label;
-    char max_col = Board::max_col_label;
-    char col = ask_player(question, min_col, max_col);
+int Chess::select_col(int col) {
     int actual_col = col - Board::min_col_label;
     return actual_col;
 }
@@ -135,60 +94,6 @@ void Chess::place_pieces(Color color, int front_row, int back_row) {
         // add piece to front row
         board[front_row][c]->set_piece_ptr(std::make_unique<Pawn>(Position{front_row, c}, color));
     }
-}
-
-int Chess::ask_player(const std::string &question, const std::vector<std::string> &possible_answers) {
-    int answer{0};
-    bool valid_answer{false};
-
-    std::cout << question << std::endl;
-
-    for (int i{0}; i < possible_answers.size(); i++)
-        std::cout << i + 1 << ": " << possible_answers[i] << std::endl;
-
-    std::cin >> answer;
-
-    // check if user entered valid input type
-    if (std::cin.fail()) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        throw std::invalid_argument{"Invalid input type."};
-    }
-
-    if (answer < 0 || answer > possible_answers.size()) {
-        std::stringstream ss{};
-        ss << "Input " << answer << " is out of range.";
-        ss << "Expected input within range <" << 0 << ";" << possible_answers.size() << ">.";
-        throw std::out_of_range{ss.str()};
-    }
-
-    return answer;
-}
-
-template<typename T>
-T Chess::ask_player(const std::string &question, T min_answer, T max_answer) {
-    T answer{};
-    bool valid_answer{false};
-
-    std::cout << question << "<" << min_answer << "," << max_answer << ">" << std::endl;
-
-    std::cin >> answer;
-
-    // check if user entered valid input type
-    if (std::cin.fail()) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        throw std::invalid_argument{"Invalid input type."};
-    }
-
-    if (answer < min_answer || answer > max_answer) {
-        std::stringstream ss {};
-        ss << "Input " << answer << " is out of range.";
-        ss << "Expected input within range <" << min_answer << ";" << max_answer << ">.";
-        throw std::out_of_range{ss.str()};
-    }
-
-    return answer;
 }
 
 bool Chess::valid_movement() {

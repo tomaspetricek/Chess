@@ -170,6 +170,33 @@ Chess.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Chess.cpp.s
 .PHONY : Chess.cpp.s
 
+Gui.o: Gui.cpp.o
+
+.PHONY : Gui.o
+
+# target to build an object file
+Gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Gui.cpp.o
+.PHONY : Gui.cpp.o
+
+Gui.i: Gui.cpp.i
+
+.PHONY : Gui.i
+
+# target to preprocess a source file
+Gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Gui.cpp.i
+.PHONY : Gui.cpp.i
+
+Gui.s: Gui.cpp.s
+
+.PHONY : Gui.s
+
+# target to generate assembly for a file
+Gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Gui.cpp.s
+.PHONY : Gui.cpp.s
+
 Player.o: Player.cpp.o
 
 .PHONY : Player.o
@@ -533,6 +560,9 @@ help:
 	@echo "... Chess.o"
 	@echo "... Chess.i"
 	@echo "... Chess.s"
+	@echo "... Gui.o"
+	@echo "... Gui.i"
+	@echo "... Gui.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"

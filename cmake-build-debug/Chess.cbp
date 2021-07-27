@@ -86,6 +86,15 @@
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h">
 			<Option target="Chess"/>
 		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Gui.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Gui.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/IllegalMove.h">
+			<Option target="Chess"/>
+		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.cpp">
 			<Option target="Chess"/>
 		</Unit>

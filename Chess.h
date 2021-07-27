@@ -33,20 +33,15 @@ private:
 
     void make_move();
 
-    void choose_piece();
+    void choose_piece(int row, int col);
 
-    void choose_next_field();
+    void choose_next_field(int row, int col);
 
-    static int choose_row();
+    static int select_row(int row);
 
-    static int choose_col();
+    static int select_col(int col);
 
     bool valid_movement();
-
-    static int ask_player(const std::string &question, const std::vector<std::string> &possible_answers);
-
-    template<typename T>
-    static T ask_player(const std::string &question, T min_answer, T max_answer);
 
 public:
     Chess();
