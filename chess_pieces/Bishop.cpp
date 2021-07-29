@@ -10,3 +10,7 @@ bool Bishop::valid_move(const Position &pos) {
 
 Bishop::Bishop(const Position &pos, Color color)
         : ChessPiece(pos, color, false, def_id) {}
+
+void Bishop::print(std::ostream &os) const {
+    ChessPiece::print(os);
+}

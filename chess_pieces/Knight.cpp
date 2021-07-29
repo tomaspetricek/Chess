@@ -13,3 +13,7 @@ bool Knight::valid_move(const Position &pos) {
     int y_abs_diff = std::abs(this->pos.get_x() - pos.get_x());
     return (x_abs_diff == 1 && y_abs_diff == 2) || (x_abs_diff == 2 && y_abs_diff == 1);
 }
+
+void Knight::print(std::ostream &os) const {
+    ChessPiece::print(os);
+}

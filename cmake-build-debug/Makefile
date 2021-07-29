@@ -251,6 +251,33 @@ Position.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Position.cpp.s
 .PHONY : Position.cpp.s
 
+Printable.o: Printable.cpp.o
+
+.PHONY : Printable.o
+
+# target to build an object file
+Printable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Printable.cpp.o
+.PHONY : Printable.cpp.o
+
+Printable.i: Printable.cpp.i
+
+.PHONY : Printable.i
+
+# target to preprocess a source file
+Printable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Printable.cpp.i
+.PHONY : Printable.cpp.i
+
+Printable.s: Printable.cpp.s
+
+.PHONY : Printable.s
+
+# target to generate assembly for a file
+Printable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Printable.cpp.s
+.PHONY : Printable.cpp.s
+
 chess_pieces/Bishop.o: chess_pieces/Bishop.cpp.o
 
 .PHONY : chess_pieces/Bishop.o
@@ -569,6 +596,9 @@ help:
 	@echo "... Position.o"
 	@echo "... Position.i"
 	@echo "... Position.s"
+	@echo "... Printable.o"
+	@echo "... Printable.i"
+	@echo "... Printable.s"
 	@echo "... chess_pieces/Bishop.o"
 	@echo "... chess_pieces/Bishop.i"
 	@echo "... chess_pieces/Bishop.s"

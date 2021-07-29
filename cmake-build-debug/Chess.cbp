@@ -107,6 +107,12 @@
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h">
 			<Option target="Chess"/>
 		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h">
+			<Option target="Chess"/>
+		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.cpp">
 			<Option target="Chess"/>
 		</Unit>

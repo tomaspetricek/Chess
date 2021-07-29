@@ -12,7 +12,7 @@
 
 class Field {
 private:
-    std::unique_ptr<ChessPiece> piece_ptr;
+    std::shared_ptr<ChessPiece> piece_ptr;
     Color color;
     const Position pos;
 public:
@@ -24,11 +24,9 @@ public:
 
     void set_color(Color color);
 
-    const std::unique_ptr<ChessPiece> &get_piece_ptr() const;
+    const std::shared_ptr<ChessPiece> &get_piece_ptr() const;
 
-    void set_piece_ptr(std::unique_ptr<ChessPiece> piece_ptr);
-
-    std::unique_ptr<ChessPiece> &move_piece_ptr();
+    void set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr);
 
     const Position &get_pos() const;
 };

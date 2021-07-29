@@ -10,3 +10,7 @@ Rook::Rook(const Position &pos, Color color)
 bool Rook::valid_move(const Position &pos) {
     return (go_vertical_direction(this->pos, pos) || go_horizontal_direction(this->pos, pos));
 }
+
+void Rook::print(std::ostream &os) const {
+    ChessPiece::print(os);
+}

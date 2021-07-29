@@ -9,11 +9,10 @@
 #include <map>
 #include <string>
 #include <memory>
+#include "../Printable.h"
 
 
-class Board {
-    friend std::ostream &operator<<(std::ostream &os, const Board &board);
-
+class Board : public Printable {
 private:
     std::vector<std::vector<std::shared_ptr<Field>>> fields;
 
@@ -29,13 +28,15 @@ public:
 
     Board();
 
-    ~Board() = default;
+    ~Board() override = default;
 
     std::vector<std::shared_ptr<Field>>& operator[](int index);
 
     static bool lies_on(const Position &pos);
 
     std::vector<std::vector<std::shared_ptr<Field>>> get_fields() const;
+
+    void print(std::ostream &os) const override;
 };
 
 

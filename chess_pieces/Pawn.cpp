@@ -13,3 +13,7 @@ bool Pawn::valid_move(const Position &pos) {
     int y_diff = this->pos.get_y() - pos.get_y();
     return (x_diff == 1 && y_diff == 0);
 }
+
+void Pawn::print(std::ostream &os) const {
+    ChessPiece::print(os);
+}

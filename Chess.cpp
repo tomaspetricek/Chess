@@ -24,7 +24,7 @@ void Chess::make_move() {
     if (!valid_move)
         throw IllegalMove{};
 
-    selected_field_ptr->set_piece_ptr(std::move(selected_piece_ptr));
+    selected_field_ptr->set_piece_ptr(selected_piece_ptr);
 }
 
 void Chess::choose_piece(int row, int col) {
@@ -36,7 +36,7 @@ void Chess::choose_piece(int row, int col) {
     if (field->get_piece_ptr()->get_color() != active_side)
         throw std::invalid_argument{"Chess piece doesn't belong to you."};
 
-    selected_piece_ptr = std::move(field->move_piece_ptr());
+    selected_piece_ptr = field->get_piece_ptr();
 }
 
 void Chess::choose_next_field(int row, int col) {

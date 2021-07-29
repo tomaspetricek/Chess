@@ -18,6 +18,8 @@ public:
     ~Bishop() override = default;
 
     bool valid_move(const Position &pos) override;
+
+    void print(std::ostream &os) const override;
 };
 
 

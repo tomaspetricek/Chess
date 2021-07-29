@@ -24,14 +24,11 @@ const Position &Field::get_pos() const {
     return pos;
 }
 
-const std::unique_ptr<ChessPiece> &Field::get_piece_ptr() const{
+const std::shared_ptr<ChessPiece> &Field::get_piece_ptr() const {
     return piece_ptr;
 }
 
-void Field::set_piece_ptr(std::unique_ptr<ChessPiece> piece_ptr) {
-    Field::piece_ptr = std::move(piece_ptr);
+void Field::set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr) {
+    Field::piece_ptr = piece_ptr;
 }
 
-std::unique_ptr<ChessPiece> &Field::move_piece_ptr() {
-    return piece_ptr;
-}

@@ -11,10 +11,11 @@
 #include "../enums.h"
 #include <cmath>
 #include "direction.h"
+#include "../Printable.h"
 // #include "../playground/Board.h"
 
 
-class ChessPiece {
+class ChessPiece : public Printable {
 protected:
     Position pos;
     Color color;
@@ -48,6 +49,8 @@ public:
     int get_id() const;
 
     void set_id(int id);
+
+    void print(std::ostream &os) const override;
 };
 
 

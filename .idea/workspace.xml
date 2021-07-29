@@ -12,14 +12,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b6f149b-6bfa-4292-b596-23d8c566423a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IllegalMove.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Printable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Printable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chess.h" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Bishop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Bishop.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Bishop.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Bishop.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/ChessPiece.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/ChessPiece.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/ChessPiece.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/ChessPiece.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/King.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/King.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/King.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/King.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Knight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Knight.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Knight.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Knight.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Pawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Pawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Pawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Pawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Queen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Queen.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Queen.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Queen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Rook.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Rook.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess_pieces/Rook.h" beforeDir="false" afterPath="$PROJECT_DIR$/chess_pieces/Rook.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Chess.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Chess.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Chess.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/playground/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/playground/Board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/playground/Field.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/playground/Field.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +115,9 @@
       <workItem from="1626897248141" duration="156000" />
       <workItem from="1626936360888" duration="1062000" />
       <workItem from="1627412178861" duration="279000" />
-      <workItem from="1627412463529" duration="2408000" />
+      <workItem from="1627412463529" duration="2617000" />
+      <workItem from="1627501772889" duration="575000" />
+      <workItem from="1627568372416" duration="597000" />
     </task>
     <servers />
   </component>
@@ -118,7 +146,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Chess.cpp</url>
-          <line>36</line>
+          <line>26</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

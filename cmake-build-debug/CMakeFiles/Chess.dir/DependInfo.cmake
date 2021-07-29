@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Gui.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Gui.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Player.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Position.cpp.o"
+  "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Printable.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o"
   "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles/Chess.dir/chess_pieces/King.cpp.o"

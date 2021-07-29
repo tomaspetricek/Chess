@@ -13,3 +13,7 @@ bool Queen::valid_move(const Position &pos) {
             go_horizontal_direction(this->pos, pos) ||
             go_diagonal_direction(this->pos, pos));
 }
+
+void Queen::print(std::ostream &os) const {
+    ChessPiece::print(os);
+}

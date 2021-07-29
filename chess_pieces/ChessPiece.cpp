@@ -39,3 +39,7 @@ int ChessPiece::get_id() const {
 void ChessPiece::set_id(int id) {
     ChessPiece::id = id;
 }
+
+void ChessPiece::print(std::ostream &os) const {
+
+}

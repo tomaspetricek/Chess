@@ -4,20 +4,19 @@
 
 #include "Board.h"
 #include "iostream"
-#include "../chess_pieces/ChessPiece.h"
-#include "../Position.h"
+
 
 Board::Board() {
     set_fields();
 }
 
-std::vector<std::shared_ptr<Field>>& Board::operator[](int index) {
+std::vector<std::shared_ptr<Field>> &Board::operator[](int index) {
     return fields[index];
 }
 
 void Board::set_fields() {
     Color color;
-    Position pos {0, 0};
+    Position pos{0, 0};
 
     for (int r{0}; r < n_rows; r++) {
         std::vector<std::shared_ptr<Field>> row;
@@ -34,14 +33,22 @@ void Board::set_fields() {
     }
 }
 
-std::ostream &operator<<(std::ostream &os, const Board &board) {
-    int empty {0};
+bool Board::lies_on(const Position &pos) {
+    return ((pos.get_x() >= 0 && pos.get_x() < n_cols) && (pos.get_y() >= 0 && pos.get_y() < n_rows));
+}
+
+std::vector<std::vector<std::shared_ptr<Field>>> Board::get_fields() const {
+    return std::vector<std::vector<std::shared_ptr<Field>>>();
+}
+
+void Board::print(std::ostream &os) const {
+    int empty{0};
     int id;
 
     os << std::endl;
-    for (const auto &row : board.fields) {
+    for (const auto &row : fields) {
         for (const auto &field : row) {
-            if (field->is_empty()){
+            if (field->is_empty()) {
                 id = empty;
             } else {
                 const auto &chess_piece = field->get_piece_ptr();
@@ -55,14 +62,4 @@ std::ostream &operator<<(std::ostream &os, const Board &board) {
         }
         os << std::endl;
     }
-
-    return os;
-}
-
-bool Board::lies_on(const Position &pos) {
-    return ((pos.get_x() >= 0 && pos.get_x() < n_cols) && (pos.get_y() >= 0 && pos.get_y() < n_rows));
-}
-
-std::vector<std::vector<std::shared_ptr<Field>>> Board::get_fields() const {
-    return std::vector<std::vector<std::shared_ptr<Field>>>();
 }
