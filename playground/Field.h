@@ -28,6 +28,8 @@ public:
 
     void set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr);
 
+    void reset_piece_ptr();
+
     const Position &get_pos() const;
 };
 

@@ -32,3 +32,7 @@ void Field::set_piece_ptr(const std::shared_ptr<ChessPiece> &piece_ptr) {
     Field::piece_ptr = piece_ptr;
 }
 
+void Field::reset_piece_ptr() {
+    piece_ptr.reset();
+}
+

@@ -48,5 +48,11 @@ int main() {
 
     std::cout << chess << std::endl;
 
+    chess.select_piece(2, 'A');
+    chess.select_next_field(3, 'A');
+    chess.make_move();
+
+    std::cout << chess << std::endl;
+
     return 0;
 }

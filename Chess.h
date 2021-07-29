@@ -27,27 +27,29 @@ class Chess : public Printable {
 private:
     Board board;
     Color active_side;
-    std::shared_ptr<ChessPiece> selected_piece_ptr;
-    std::shared_ptr<Field> selected_field_ptr;
+    std::shared_ptr<Field> original_field_ptr;
+    std::shared_ptr<Field> next_field_ptr;
 
     void place_pieces(Color color, int front_row, int back_row);
 
-    void make_move();
+    static int get_actual_row(int row);
 
-    static int select_row(int row);
+    static int get_actual_col(char col);
 
-    static int select_col(int col);
+    std::shared_ptr<Field> &get_field(int row, char col);
 
     bool valid_movement();
 
 public:
     Chess();
 
-    ~Chess();
+    ~Chess() override = default;
 
-    void choose_piece(int row, int col);
+    void select_piece(int row, char col);
 
-    void choose_next_field(int row, int col);
+    void select_next_field(int row, char col);
+
+    void make_move();
 
     void print(std::ostream &os) const override;
 
