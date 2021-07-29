@@ -14,19 +14,6 @@ Chess::Chess() : board{}, active_side{White} {
 
 Chess::~Chess() = default;
 
-void Chess::make_move() {
-    bool valid_move{false};
-
-    choose_piece();
-    choose_next_field();
-    valid_move = valid_movement();
-
-    if (!valid_move)
-        throw IllegalMove{};
-
-    selected_field_ptr->set_piece_ptr(selected_piece_ptr);
-}
-
 void Chess::choose_piece(int row, int col) {
     std::shared_ptr<Field> field = board[row][col];
 
@@ -98,4 +85,8 @@ void Chess::place_pieces(Color color, int front_row, int back_row) {
 
 bool Chess::valid_movement() {
     return selected_piece_ptr->valid_move(selected_field_ptr->get_pos());
+}
+
+void Chess::print(std::ostream &os) const {
+    os << board;
 }

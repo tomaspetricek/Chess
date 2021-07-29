@@ -4,8 +4,10 @@
 CMakeFiles/Chess.dir/Chess.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/IllegalMove.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.h
@@ -18,6 +20,9 @@ CMakeFiles/Chess.dir/Chess.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Field.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/utils.h
+CMakeFiles/Chess.dir/Gui.cpp.o
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Gui.cpp
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Gui.h
 CMakeFiles/Chess.dir/Player.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
@@ -25,9 +30,13 @@ CMakeFiles/Chess.dir/Player.cpp.o
 CMakeFiles/Chess.dir/Position.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+CMakeFiles/Chess.dir/Printable.cpp.o
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.cpp
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
 CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
@@ -36,6 +45,7 @@ CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o
 CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.h
@@ -43,6 +53,7 @@ CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o
 CMakeFiles/Chess.dir/chess_pieces/King.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.h
@@ -51,6 +62,7 @@ CMakeFiles/Chess.dir/chess_pieces/King.cpp.o
 CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Knight.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Knight.h
@@ -59,6 +71,7 @@ CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o
 CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Pawn.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Pawn.h
@@ -67,6 +80,7 @@ CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o
 CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Queen.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Queen.h
@@ -75,6 +89,7 @@ CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o
 CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Rook.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Rook.h
@@ -88,6 +103,7 @@ CMakeFiles/Chess.dir/main.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Bishop.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/King.h
@@ -96,6 +112,7 @@ CMakeFiles/Chess.dir/main.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Queen.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/Rook.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/color.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/enums.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/main.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.h
@@ -104,8 +121,10 @@ CMakeFiles/Chess.dir/main.cpp.o
 CMakeFiles/Chess.dir/playground/Board.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/color.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/enums.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.cpp
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/playground/Board.h
@@ -113,6 +132,7 @@ CMakeFiles/Chess.dir/playground/Board.cpp.o
 CMakeFiles/Chess.dir/playground/Field.cpp.o
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Position.h
+ /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/ChessPiece.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.h
  /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/enums.h

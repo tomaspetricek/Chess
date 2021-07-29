@@ -161,6 +161,9 @@
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/chess_pieces/direction.h">
 			<Option target="Chess"/>
 		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/color.h">
+			<Option target="Chess"/>
+		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/enums.h">
 			<Option target="Chess"/>
 		</Unit>

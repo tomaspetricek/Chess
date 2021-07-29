@@ -3,33 +3,28 @@
 //
 
 #include "Board.h"
-#include "iostream"
+#include <iostream>
+#include <iomanip>
+#include "../color.h"
 
 
 Board::Board() {
     set_fields();
 }
 
-std::vector<std::shared_ptr<Field>> &Board::operator[](int index) {
+std::array<std::shared_ptr<Field>, Board::n_cols> &Board::operator[](int index) {
     return fields[index];
 }
 
 void Board::set_fields() {
     Color color;
-    Position pos{0, 0};
 
     for (int r{0}; r < n_rows; r++) {
         std::vector<std::shared_ptr<Field>> row;
         for (int c{0}; c < n_cols; c++) {
-            if (r % 2 == 0 && c % 2 == 0 || r % 2 != 0 && c % 2 != 0) {
-                color = White;
-            } else {
-                color = Black;
-            }
-            pos = Position{r, c};
-            row.push_back(std::make_shared<Field>(pos, color));
+            color = (r % 2 == 0 && c % 2 == 0 || r % 2 != 0 && c % 2 != 0) ? White : Black;
+            fields[r][c] = std::make_shared<Field>(Position{r, c}, color);
         }
-        fields.push_back(row);
     }
 }
 
@@ -44,9 +39,12 @@ std::vector<std::vector<std::shared_ptr<Field>>> Board::get_fields() const {
 void Board::print(std::ostream &os) const {
     int empty{0};
     int id;
+    const int width {4};
+    int row_label = Board::max_row_label;
+    char col_label = Board::min_col_label;
 
-    os << std::endl;
     for (const auto &row : fields) {
+        os << std::setw(width) << cc::FG_BLUE << row_label-- << cc::FG_DEFAULT;
         for (const auto &field : row) {
             if (field->is_empty()) {
                 id = empty;
@@ -58,8 +56,15 @@ void Board::print(std::ostream &os) const {
                     id *= -1;
                 }
             }
-            os << " " << id << " ";
+            os << std::setw(width) << id;
         }
         os << std::endl;
     }
+
+    os << std::setw(width) << ' ' << cc::FG_BLUE;
+    for (int c {0}; c < Board::n_cols; c++){
+        os << std::setw(width) << col_label++;
+    }
+
+    os << cc::FG_DEFAULT;
 }

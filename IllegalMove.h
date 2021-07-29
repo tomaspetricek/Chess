@@ -12,7 +12,7 @@ public:
     ~IllegalMove() noexcept override = default;
 
     const char *what() const noexcept override {
-        return "Trying to make an illegal move".
+        return "Trying to make an illegal move";
     }
 };
 

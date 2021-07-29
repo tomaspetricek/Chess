@@ -10,14 +10,10 @@
 #include <string>
 #include <memory>
 #include "../Printable.h"
+#include <array>
 
 
 class Board : public Printable {
-private:
-    std::vector<std::vector<std::shared_ptr<Field>>> fields;
-
-    void set_fields();
-
 public:
     static constexpr const int n_cols{8};
     static constexpr const int n_rows{n_cols};
@@ -30,13 +26,18 @@ public:
 
     ~Board() override = default;
 
-    std::vector<std::shared_ptr<Field>>& operator[](int index);
+    std::array<std::shared_ptr<Field>, Board::n_cols> &operator[](int index);
 
     static bool lies_on(const Position &pos);
 
     std::vector<std::vector<std::shared_ptr<Field>>> get_fields() const;
 
     void print(std::ostream &os) const override;
+
+private:
+    std::array<std::array<std::shared_ptr<Field>, Board::n_cols>, Board::n_rows> fields;
+
+    void set_fields();
 };
 
 

@@ -7,7 +7,7 @@
 
 
 class Gui {
-
+    void render();
 };
 
 

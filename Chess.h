@@ -20,9 +20,10 @@
 #include "utils.h"
 #include <typeinfo>
 #include <memory>
+#include "Printable.h"
 
 
-class Chess {
+class Chess : public Printable {
 private:
     Board board;
     Color active_side;
@@ -32,10 +33,6 @@ private:
     void place_pieces(Color color, int front_row, int back_row);
 
     void make_move();
-
-    void choose_piece(int row, int col);
-
-    void choose_next_field(int row, int col);
 
     static int select_row(int row);
 
@@ -48,15 +45,11 @@ public:
 
     ~Chess();
 
-    void play();
+    void choose_piece(int row, int col);
 
-    void pause();
+    void choose_next_field(int row, int col);
 
-    void resume();
-
-    bool select_piece(int x, int y);
-
-    bool move_selected_piece(int x, int y);
+    void print(std::ostream &os) const override;
 
     // bool perform_castling(King* king, Rook* rook);
 };

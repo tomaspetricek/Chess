@@ -4,6 +4,7 @@
 #include "chess_pieces/Knight.h"
 #include "playground/Board.h"
 #include "Chess.h"
+#include "color.h"
 
 
 template<typename T>
@@ -43,15 +44,9 @@ int ask(const std::string &question, const std::vector<std::string> &possible_an
 }
 
 int main() {
-    // Knight knight {};
-    /*
-    ChessPiece* knight = new Knight {};
-    std::cout << knight->jumps_over << std::endl;
-    delete knight;
-    */
+    Chess chess;
 
-    Chess c {};
-    c.play();
+    std::cout << chess << std::endl;
 
     return 0;
 }
