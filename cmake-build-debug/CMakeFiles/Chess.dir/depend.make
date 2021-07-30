@@ -38,6 +38,7 @@ CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../chess_pieces/Pawn.h
 CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../chess_pieces/Queen.h
 CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../chess_pieces/Rook.h
 CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../chess_pieces/direction.h
+CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../console_text.h
 CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../enums.h
 CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../playground/Board.h
 CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../playground/Field.h
@@ -122,6 +123,7 @@ CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../Position.h
 CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../chess_pieces/direction.cpp
 CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../chess_pieces/direction.h
 
+CMakeFiles/Chess.dir/main.cpp.o: ../Callback.h
 CMakeFiles/Chess.dir/main.cpp.o: ../Chess.h
 CMakeFiles/Chess.dir/main.cpp.o: ../ConsoleApp.h
 CMakeFiles/Chess.dir/main.cpp.o: ../Player.h
@@ -135,7 +137,7 @@ CMakeFiles/Chess.dir/main.cpp.o: ../chess_pieces/Pawn.h
 CMakeFiles/Chess.dir/main.cpp.o: ../chess_pieces/Queen.h
 CMakeFiles/Chess.dir/main.cpp.o: ../chess_pieces/Rook.h
 CMakeFiles/Chess.dir/main.cpp.o: ../chess_pieces/direction.h
-CMakeFiles/Chess.dir/main.cpp.o: ../color.h
+CMakeFiles/Chess.dir/main.cpp.o: ../console_text.h
 CMakeFiles/Chess.dir/main.cpp.o: ../enums.h
 CMakeFiles/Chess.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Chess.dir/main.cpp.o: ../playground/Board.h
@@ -147,7 +149,7 @@ CMakeFiles/Chess.dir/playground/Board.cpp.o: ../Position.h
 CMakeFiles/Chess.dir/playground/Board.cpp.o: ../Printable.h
 CMakeFiles/Chess.dir/playground/Board.cpp.o: ../chess_pieces/ChessPiece.h
 CMakeFiles/Chess.dir/playground/Board.cpp.o: ../chess_pieces/direction.h
-CMakeFiles/Chess.dir/playground/Board.cpp.o: ../color.h
+CMakeFiles/Chess.dir/playground/Board.cpp.o: ../console_text.h
 CMakeFiles/Chess.dir/playground/Board.cpp.o: ../enums.h
 CMakeFiles/Chess.dir/playground/Board.cpp.o: ../playground/Board.cpp
 CMakeFiles/Chess.dir/playground/Board.cpp.o: ../playground/Board.h

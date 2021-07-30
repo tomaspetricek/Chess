@@ -5,7 +5,7 @@
 #include "Board.h"
 #include <iostream>
 #include <iomanip>
-#include "../color.h"
+#include "../console_text.h"
 
 
 Board::Board() {
@@ -44,7 +44,7 @@ void Board::print(std::ostream &os) const {
     char col_label = Board::min_col_label;
 
     for (const auto &row : fields) {
-        os << std::setw(width) << cc::FG_BLUE << row_label-- << cc::FG_DEFAULT;
+        os << std::setw(width) << ct::fg_blue << row_label-- << ct::fg_def;
         for (const auto &field : row) {
             if (field->is_empty()) {
                 id = empty;
@@ -61,10 +61,10 @@ void Board::print(std::ostream &os) const {
         os << std::endl;
     }
 
-    os << std::setw(width) << ' ' << cc::FG_BLUE;
+    os << std::setw(width) << ' ' << ct::fg_blue;
     for (int c {0}; c < Board::n_cols; c++){
         os << std::setw(width) << col_label++;
     }
 
-    os << cc::FG_DEFAULT;
+    os << ct::fg_def;
 }
