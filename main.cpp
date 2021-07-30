@@ -5,6 +5,7 @@
 #include "playground/Board.h"
 #include "Chess.h"
 #include "color.h"
+#include "ConsoleApp.h"
 
 
 template<typename T>
@@ -44,15 +45,7 @@ int ask(const std::string &question, const std::vector<std::string> &possible_an
 }
 
 int main() {
-    Chess chess;
-
-    std::cout << chess << std::endl;
-
-    chess.select_piece(2, 'A');
-    chess.select_next_field(3, 'A');
-    chess.make_move();
-
-    std::cout << chess << std::endl;
-
+    ConsoleApp app;
+    app.run();
     return 0;
 }

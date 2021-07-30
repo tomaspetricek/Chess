@@ -143,6 +143,33 @@ Chess/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/build
 .PHONY : Chess/fast
 
+Callback.o: Callback.cpp.o
+
+.PHONY : Callback.o
+
+# target to build an object file
+Callback.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Callback.cpp.o
+.PHONY : Callback.cpp.o
+
+Callback.i: Callback.cpp.i
+
+.PHONY : Callback.i
+
+# target to preprocess a source file
+Callback.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Callback.cpp.i
+.PHONY : Callback.cpp.i
+
+Callback.s: Callback.cpp.s
+
+.PHONY : Callback.s
+
+# target to generate assembly for a file
+Callback.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Callback.cpp.s
+.PHONY : Callback.cpp.s
+
 Chess.o: Chess.cpp.o
 
 .PHONY : Chess.o
@@ -169,6 +196,33 @@ Chess.s: Chess.cpp.s
 Chess.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Chess.cpp.s
 .PHONY : Chess.cpp.s
+
+ConsoleApp.o: ConsoleApp.cpp.o
+
+.PHONY : ConsoleApp.o
+
+# target to build an object file
+ConsoleApp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/ConsoleApp.cpp.o
+.PHONY : ConsoleApp.cpp.o
+
+ConsoleApp.i: ConsoleApp.cpp.i
+
+.PHONY : ConsoleApp.i
+
+# target to preprocess a source file
+ConsoleApp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/ConsoleApp.cpp.i
+.PHONY : ConsoleApp.cpp.i
+
+ConsoleApp.s: ConsoleApp.cpp.s
+
+.PHONY : ConsoleApp.s
+
+# target to generate assembly for a file
+ConsoleApp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/ConsoleApp.cpp.s
+.PHONY : ConsoleApp.cpp.s
 
 Gui.o: Gui.cpp.o
 
@@ -584,9 +638,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Chess"
+	@echo "... Callback.o"
+	@echo "... Callback.i"
+	@echo "... Callback.s"
 	@echo "... Chess.o"
 	@echo "... Chess.i"
 	@echo "... Chess.s"
+	@echo "... ConsoleApp.o"
+	@echo "... ConsoleApp.i"
+	@echo "... ConsoleApp.s"
 	@echo "... Gui.o"
 	@echo "... Gui.i"
 	@echo "... Gui.s"

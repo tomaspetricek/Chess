@@ -285,6 +285,32 @@ CMakeFiles/Chess.dir/Printable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/Printable.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.cpp -o CMakeFiles/Chess.dir/Printable.cpp.s
 
+CMakeFiles/Chess.dir/ConsoleApp.cpp.o: CMakeFiles/Chess.dir/flags.make
+CMakeFiles/Chess.dir/ConsoleApp.cpp.o: ../ConsoleApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Chess.dir/ConsoleApp.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/ConsoleApp.cpp.o -c /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.cpp
+
+CMakeFiles/Chess.dir/ConsoleApp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chess.dir/ConsoleApp.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.cpp > CMakeFiles/Chess.dir/ConsoleApp.cpp.i
+
+CMakeFiles/Chess.dir/ConsoleApp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/ConsoleApp.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.cpp -o CMakeFiles/Chess.dir/ConsoleApp.cpp.s
+
+CMakeFiles/Chess.dir/Callback.cpp.o: CMakeFiles/Chess.dir/flags.make
+CMakeFiles/Chess.dir/Callback.cpp.o: ../Callback.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Chess.dir/Callback.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/Callback.cpp.o -c /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.cpp
+
+CMakeFiles/Chess.dir/Callback.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chess.dir/Callback.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.cpp > CMakeFiles/Chess.dir/Callback.cpp.i
+
+CMakeFiles/Chess.dir/Callback.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/Callback.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.cpp -o CMakeFiles/Chess.dir/Callback.cpp.s
+
 # Object files for target Chess
 Chess_OBJECTS = \
 "CMakeFiles/Chess.dir/main.cpp.o" \
@@ -302,7 +328,9 @@ Chess_OBJECTS = \
 "CMakeFiles/Chess.dir/playground/Board.cpp.o" \
 "CMakeFiles/Chess.dir/playground/Field.cpp.o" \
 "CMakeFiles/Chess.dir/Gui.cpp.o" \
-"CMakeFiles/Chess.dir/Printable.cpp.o"
+"CMakeFiles/Chess.dir/Printable.cpp.o" \
+"CMakeFiles/Chess.dir/ConsoleApp.cpp.o" \
+"CMakeFiles/Chess.dir/Callback.cpp.o"
 
 # External object files for target Chess
 Chess_EXTERNAL_OBJECTS =
@@ -323,9 +351,11 @@ Chess: CMakeFiles/Chess.dir/playground/Board.cpp.o
 Chess: CMakeFiles/Chess.dir/playground/Field.cpp.o
 Chess: CMakeFiles/Chess.dir/Gui.cpp.o
 Chess: CMakeFiles/Chess.dir/Printable.cpp.o
+Chess: CMakeFiles/Chess.dir/ConsoleApp.cpp.o
+Chess: CMakeFiles/Chess.dir/Callback.cpp.o
 Chess: CMakeFiles/Chess.dir/build.make
 Chess: CMakeFiles/Chess.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Chess"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Chess"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Chess.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

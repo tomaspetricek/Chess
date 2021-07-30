@@ -6,15 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.cpp
-Chess.h
-/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
-stdexcept
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.h
+functional
 -
-iostream
--
-IllegalMove.h
-/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/IllegalMove.h
 
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
 playground/Board.h
@@ -50,9 +44,23 @@ memory
 Printable.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Printable.h
 
-/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/IllegalMove.h
-exception
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.cpp
+ConsoleApp.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.h
+iostream
 -
+utility
+-
+vector
+-
+functional
+-
+Callback.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.h
+
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.h
+Chess.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h
 
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Player.h
 enums.h

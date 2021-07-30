@@ -53,6 +53,10 @@ public:
 
     void print(std::ostream &os) const override;
 
+    bool piece_selected();
+
+    bool next_field_selected();
+
     // bool perform_castling(King* king, Rook* rook);
 };
 

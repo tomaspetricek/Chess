@@ -80,10 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Callback.h">
+			<Option target="Chess"/>
+		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.cpp">
 			<Option target="Chess"/>
 		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Chess.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/ConsoleApp.h">
 			<Option target="Chess"/>
 		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/Chess/Gui.cpp">

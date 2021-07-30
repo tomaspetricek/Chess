@@ -117,3 +117,11 @@ void Chess::make_move() {
     original_field_ptr.reset();
     next_field_ptr.reset();
 }
+
+bool Chess::piece_selected() {
+    return original_field_ptr != nullptr;
+}
+
+bool Chess::next_field_selected() {
+    return next_field_ptr != nullptr;
+}
