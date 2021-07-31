@@ -15,16 +15,19 @@ private:
 
     std::pair<std::vector<std::string>, std::vector<Callback<ConsoleApp, void>>> get_menu_opts();
 
-public:
-    ConsoleApp();
-
-    void run();
-
     void select_piece();
 
     void make_move();
 
     void select_next_field();
+
+    static int select_row();
+
+    static char select_col();
+public:
+    ConsoleApp();
+
+    void run();
 };
 
 

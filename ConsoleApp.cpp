@@ -9,6 +9,7 @@
 #include <functional>
 #include "Callback.h"
 #include "console_text.h"
+#include "playground/Board.h"
 
 
 template<typename T>
@@ -25,12 +26,15 @@ T ask(const std::string &question, T min_answer, T max_answer) {
     if (std::cin.fail()) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        throw std::invalid_argument{"Invalid input type."};
+        std::stringstream ss;
+        ss << "Invalid input type. ";
+        ss << "Expected input type " << typeid(answer).name() << "." << std::endl;
+        throw std::invalid_argument{ss.str()};
     }
 
     if (answer < min_answer || answer > max_answer) {
-        std::stringstream ss{};
-        ss << "Input " << answer << " is out of range.";
+        std::stringstream ss;
+        ss << "Input " << answer << " is out of range. ";
         ss << "Expected input within range <" << min_answer << ";" << max_answer << ">.";
         throw std::out_of_range{ss.str()};
     }
@@ -59,18 +63,28 @@ void ConsoleApp::run() {
         std::cout << chess << std::endl;
 
         menu_opts = std::move(get_menu_opts());
-        int idx = ask("Choose one of the options bellow.", menu_opts.first);
-        menu_opts.second[idx - 1]();
 
+        try {
+            int idx = ask("Choose one of the options bellow.", menu_opts.first);
+            menu_opts.second[idx - 1]();
+        } catch (const std::logic_error &err) {
+            std::cerr << err.what() << std::endl;
+        } catch (const std::invalid_argument &err) {
+            std::cerr << err.what() << std::endl;
+        }
     } while (playing);
 }
 
 void ConsoleApp::select_piece() {
-    chess.select_piece(2, 'A');
+    int row = select_row();
+    char col = select_col();
+    chess.select_piece(row, col);
 }
 
 void ConsoleApp::select_next_field() {
-    chess.select_next_field(3, 'A');
+    int row = select_row();
+    char col = select_col();
+    chess.select_next_field(row, col);
 }
 
 void ConsoleApp::make_move() {
@@ -93,4 +107,12 @@ std::pair<std::vector<std::string>, std::vector<Callback<ConsoleApp, void>>> Con
         }
     }
     return menu_opts;
+}
+
+int ConsoleApp::select_row() {
+    return ask("Select row.", Board::min_row_label, Board::max_row_label);
+}
+
+char ConsoleApp::select_col() {
+    return ask("Select col.", Board::min_col_label, Board::max_col_label);
 }

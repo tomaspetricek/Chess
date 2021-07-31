@@ -6,9 +6,12 @@
 #include "Chess.h"
 #include "console_text.h"
 #include "ConsoleApp.h"
+#include <memory>
+#include <string>
+#include <iostream>
+
 
 int main() {
     ConsoleApp app;
     app.run();
-    return 0;
 }
