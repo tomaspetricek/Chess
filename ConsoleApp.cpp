@@ -53,10 +53,9 @@ int ask(const std::string &question, const std::vector<std::string> &possible_an
     return ask(ss.str(), 1, (int) possible_answers.size());
 }
 
-ConsoleApp::ConsoleApp() : chess{} {}
+ConsoleApp::ConsoleApp() : chess{}, playing{true} {}
 
 void ConsoleApp::run() {
-    bool playing{true};
     std::pair<std::vector<std::string>, std::vector<Callback<ConsoleApp, void>>> menu_opts;
 
     do {
@@ -94,6 +93,9 @@ void ConsoleApp::make_move() {
 std::pair<std::vector<std::string>, std::vector<Callback<ConsoleApp, void>>> ConsoleApp::get_menu_opts() {
     std::pair<std::vector<std::string>, std::vector<Callback<ConsoleApp, void>>> menu_opts;
 
+    menu_opts.first.emplace_back("Finish playing.");
+    menu_opts.second.emplace_back(this, &ConsoleApp::finish);
+    
     menu_opts.first.emplace_back("Select chess piece.");
     menu_opts.second.emplace_back(this, &ConsoleApp::select_piece);
 
@@ -115,4 +117,8 @@ int ConsoleApp::select_row() {
 
 char ConsoleApp::select_col() {
     return ask("Select col.", Board::min_col_label, Board::max_col_label);
+}
+
+void ConsoleApp::finish() {
+    playing = false;
 }

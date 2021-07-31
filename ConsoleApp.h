@@ -13,6 +13,8 @@ class ConsoleApp {
 private:
     Chess chess;
 
+    bool playing;
+
     std::pair<std::vector<std::string>, std::vector<Callback<ConsoleApp, void>>> get_menu_opts();
 
     void select_piece();
@@ -24,6 +26,8 @@ private:
     static int select_row();
 
     static char select_col();
+
+    void finish();
 public:
     ConsoleApp();
 
