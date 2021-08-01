@@ -65,6 +65,8 @@ CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o: ../chess_pieces/Bishop.h
 CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o: ../chess_pieces/ChessPiece.h
 CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/Bishop.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../Position.h
@@ -73,6 +75,8 @@ CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../chess_pieces/ChessPiece.c
 CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../chess_pieces/ChessPiece.h
 CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/ChessPiece.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../Position.h
@@ -82,6 +86,8 @@ CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../chess_pieces/King.cpp
 CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../chess_pieces/King.h
 CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/King.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../Position.h
@@ -91,6 +97,8 @@ CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../chess_pieces/Knight.cpp
 CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../chess_pieces/Knight.h
 CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/Knight.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../Position.h
@@ -100,6 +108,8 @@ CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../chess_pieces/Pawn.cpp
 CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../chess_pieces/Pawn.h
 CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/Pawn.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../Position.h
@@ -109,6 +119,8 @@ CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../chess_pieces/Queen.cpp
 CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../chess_pieces/Queen.h
 CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/Queen.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../Player.h
 CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../Position.h
@@ -118,6 +130,8 @@ CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../chess_pieces/Rook.cpp
 CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../chess_pieces/Rook.h
 CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../playground/Board.h
+CMakeFiles/Chess.dir/chess_pieces/Rook.cpp.o: ../playground/Field.h
 
 CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../Position.h
 CMakeFiles/Chess.dir/chess_pieces/direction.cpp.o: ../chess_pieces/direction.cpp
@@ -161,6 +175,7 @@ CMakeFiles/Chess.dir/playground/Field.cpp.o: ../Printable.h
 CMakeFiles/Chess.dir/playground/Field.cpp.o: ../chess_pieces/ChessPiece.h
 CMakeFiles/Chess.dir/playground/Field.cpp.o: ../chess_pieces/direction.h
 CMakeFiles/Chess.dir/playground/Field.cpp.o: ../enums.h
+CMakeFiles/Chess.dir/playground/Field.cpp.o: ../playground/Board.h
 CMakeFiles/Chess.dir/playground/Field.cpp.o: ../playground/Field.cpp
 CMakeFiles/Chess.dir/playground/Field.cpp.o: ../playground/Field.h
 

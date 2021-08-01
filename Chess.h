@@ -5,7 +5,6 @@
 #ifndef CHESS_CHESS_H
 #define CHESS_CHESS_H
 
-#include "playground/Board.h"
 #include "chess_pieces/ChessPiece.h"
 #include "chess_pieces/King.h"
 #include "chess_pieces/Rook.h"
@@ -13,6 +12,7 @@
 #include "chess_pieces/Queen.h"
 #include "chess_pieces/Pawn.h"
 #include "chess_pieces/Knight.h"
+#include "playground/Board.h"
 #include "Position.h"
 #include "enums.h"
 #include <string>

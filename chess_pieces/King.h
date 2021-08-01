@@ -7,7 +7,6 @@
 
 #include "ChessPiece.h"
 
-
 class King: public ChessPiece {
 private:
     static constexpr const int def_id = 5;

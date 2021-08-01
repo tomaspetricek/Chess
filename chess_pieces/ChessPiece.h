@@ -12,7 +12,7 @@
 #include <cmath>
 #include "direction.h"
 #include "../Printable.h"
-// #include "../playground/Board.h"
+#include "../playground/Board.h"
 
 
 class ChessPiece : public Printable {

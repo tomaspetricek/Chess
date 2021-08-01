@@ -9,6 +9,7 @@
 #include "../enums.h"
 #include <memory>
 
+class ChessPiece;
 
 class Field {
 private:

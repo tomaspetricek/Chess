@@ -12,6 +12,7 @@
 #include "../Printable.h"
 #include <array>
 
+class Field;
 
 class Board : public Printable {
 public:
